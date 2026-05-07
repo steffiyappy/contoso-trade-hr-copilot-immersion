@@ -186,7 +186,7 @@ window.CT_USE_CASES = [
       ]
     },
     tip: "Save standard off-boarding prompt templates in <b>Copilot Pages</b> so every HR exec runs the same flow — consistent tone, same checklist, no missed steps.",
-    beyond: "<b>Beyond Copilot:</b> automate prorated leave and asset workflow with <b>Power Automate + Adrenalin connector</b>; surface status on a <b>Power Apps</b> exit-tracker.",
+    beyond: "<b>Beyond Copilot:</b> automate prorated leave and asset workflow with <b>Power Automate</b> calling Adrenalin's REST API via a <b>custom connector</b> (no certified Adrenalin connector exists in Power Automate today); surface status on a <b>Power Apps</b> exit-tracker.",
     feasible: [
       "Drafting acceptance letters, exit checklists and farewell announcements (Copilot in Word / Outlook)",
       "Sending reminders and tracking responses across IT, Finance, Admin (Copilot in Outlook + Teams)",
@@ -195,7 +195,7 @@ window.CT_USE_CASES = [
       "Coordinating the off-boarding checklist across Outlook, Word and Teams with Cowork (Frontier preview)"
     ],
     notFeasible: [
-      "Automatic prorated leave/final-pay calculation pulled from Adrenalin — needs Power Automate + HRMS connector",
+      "Automatic prorated leave/final-pay calculation pulled from Adrenalin — no certified Adrenalin connector in Power Automate; needs a custom connector against Adrenalin's REST API or middleware",
       "Asset return tracking with status dashboards — needs Power Apps + Dataverse",
       "Auto-revoking system access on last working day — needs Entra ID lifecycle workflows"
     ],
@@ -532,7 +532,7 @@ window.CT_USE_CASES = [
       "Generating leadership decks on payroll cost trends (Copilot in PowerPoint)"
     ],
     notFeasible: [
-      "Automated reconciliation between Adrenalin payroll and bank file — needs Power Automate or middleware",
+      "Automated reconciliation between Adrenalin payroll and bank file — no certified Adrenalin Power Automate connector; needs a custom connector / middleware",
       "Statutory submission generation (EPF, SOCSO, EIS, LHDN) — handled by Adrenalin / payroll bureau, not Copilot",
       "Real-time fraud detection — needs Azure ML or a fraud-detection platform"
     ],
