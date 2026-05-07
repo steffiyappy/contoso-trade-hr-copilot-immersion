@@ -23,7 +23,7 @@
   </div>
 
 <script>
-  const HASH = "a1f4add972476319f7d7abece3f744e966c0930cd9a44bece7bac62729d4621c";
+  const HASH = "563acfd5781fed51599ece1ca53d2767931c7a13eca8ba1520b5e5a84e5cbe79";
   async function sha256(s){
     const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(s));
     return Array.from(new Uint8Array(buf)).map(b=>b.toString(16).padStart(2,"0")).join("");
