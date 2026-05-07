@@ -62,6 +62,9 @@ window.CT_USE_CASES = [
       "Live, real-time connection to Adrenalin HRMS — Copilot does not have a native Adrenalin connector",
       "Predictive attrition modelling at scale — needs Power BI + Azure ML or Fabric Data Science",
       "Automated scheduled refresh of dashboards — handled by Power BI / Power Automate, not Copilot"
+    ],
+    files: [
+      { name: "HR-Q1-Analysis.xlsx", file: "data/HR-Q1-Analysis.xlsx", why: "Source HR data (headcount, attrition, demographics) — pin in Copilot Chat / open in Excel." }
     ]
   },
   {
@@ -127,6 +130,10 @@ window.CT_USE_CASES = [
       "AI-conducted structured digital interviews with automated competency scoring — NOT a Copilot capability; needs an HR-tech vendor (e.g., HireVue, iMocha) or a custom Copilot Studio agent + Azure AI Speech",
       "ATS workflow, requisition routing, background checks — needs Dynamics 365 HR or a dedicated ATS",
       "Sourcing candidates from LinkedIn — requires LinkedIn Recruiter, separate licence"
+    ],
+    files: [
+      { name: "Compliance-Officer-JD.docx", file: "data/Compliance-Officer-JD.docx", why: "Reference JD to refine, paste into prompts, or compare CVs against." },
+      { name: "Sample-CVs-Compliance-Role.docx", file: "data/Sample-CVs-Compliance-Role.docx", why: "Three candidate CVs to feed into Copilot Chat for comparative scoring." }
     ]
   },
   {
@@ -184,6 +191,9 @@ window.CT_USE_CASES = [
       "Automatic prorated leave/final-pay calculation pulled from Adrenalin — needs Power Automate + HRMS connector",
       "Asset return tracking with status dashboards — needs Power Apps + Dataverse",
       "Auto-revoking system access on last working day — needs Entra ID lifecycle workflows"
+    ],
+    files: [
+      { name: "Employee-Handbook-v3.1.docx", file: "data/Employee-Handbook-v3.1.docx", why: "Section 11 (Resignation & Off-boarding) — ground letters and checklists on the right clauses." }
     ]
   },
   {
@@ -241,6 +251,11 @@ window.CT_USE_CASES = [
       "Centralised case-management portal with role-based access — needs Power Apps + Dataverse",
       "Auto-classification of severity and routing — needs SharePoint Premium (Syntex) or Power Automate",
       "Direct push of finalised letters into Adrenalin's employee record — needs HRMS API integration"
+    ],
+    files: [
+      { name: "Disciplinary-Cases-2026.xlsx", file: "data/Disciplinary-Cases-2026.xlsx", why: "Live case log to summarise, classify and trend." },
+      { name: "AML-Policy-v4.2.docx", file: "data/AML-Policy-v4.2.docx", why: "AMLA-specific clauses to cite in show-cause and warning letters." },
+      { name: "Employee-Handbook-v3.1.docx", file: "data/Employee-Handbook-v3.1.docx", why: "Section 7 (Code of Conduct) and Section 9 (Disciplinary Procedure) for clause references." }
     ]
   },
   {
@@ -297,6 +312,9 @@ window.CT_USE_CASES = [
       "Real-time approval workflow with audit trail — needs Power Automate + Power Apps",
       "Live dashboard for leadership consumption — needs Power BI",
       "Automatic GL posting to Finance system — needs Dynamics 365 / SAP integration"
+    ],
+    files: [
+      { name: "Engagement-Budget-FY26.xlsx", file: "data/Engagement-Budget-FY26.xlsx", why: "Branch × quarter spend vs allocation for variance analysis and memos." }
     ]
   },
   {
@@ -351,6 +369,9 @@ window.CT_USE_CASES = [
       "Self-service digital application form with eligibility logic — needs Power Apps / Microsoft Forms + Power Automate",
       "Automated approval routing with SLA tracking — needs Power Automate",
       "Live welfare-spend dashboard — needs Power BI"
+    ],
+    files: [
+      { name: "Welfare-Applications-Nov2026.xlsx", file: "data/Welfare-Applications-Nov2026.xlsx", why: "November welfare applications to triage, eligibility-check and respond to." }
     ]
   },
   {
@@ -400,6 +421,10 @@ window.CT_USE_CASES = [
       "Hard-constraint shift optimisation that minimises OT — needs an optimisation solver (Azure ML, Gurobi)",
       "Live OT alerting when an employee crosses a threshold — needs Power Automate triggers on the HRMS",
       "Auto-block of OT in the time clock — needs configuration inside Adrenalin itself"
+    ],
+    files: [
+      { name: "Overtime-Report-Nov2026.xlsx", file: "data/Overtime-Report-Nov2026.xlsx", why: "Monthly OT export — feed into Copilot in Excel for outliers, trends and incentive correlation." },
+      { name: "Payroll-Oct-vs-Nov-2026.xlsx", file: "data/Payroll-Oct-vs-Nov-2026.xlsx", why: "Pair with the OT file in Copilot Chat to correlate OT cost with payroll movement." }
     ]
   },
   {
@@ -444,6 +469,9 @@ window.CT_USE_CASES = [
     notFeasible: [
       "Generating an optimised roster that respects all hard constraints (manpower, certifications, statutory rest, AMLA-specific cover) — Copilot is NOT an optimisation engine. Needs Microsoft Shifts (manual), Dynamics 365 Field Service, or a dedicated WFM tool",
       "Real-time shift swaps and approvals — needs Microsoft Shifts in Teams + Power Automate"
+    ],
+    files: [
+      { name: "Branch-Shift-Roster-Nov2026.xlsx", file: "data/Branch-Shift-Roster-Nov2026.xlsx", why: "Two-week roster across 7 branches with AML-cert and constraint sheet — Copilot in Excel can audit fairness, gaps and constraint breaches." }
     ]
   },
   {
@@ -492,6 +520,9 @@ window.CT_USE_CASES = [
       "Automated reconciliation between Adrenalin payroll and bank file — needs Power Automate or middleware",
       "Statutory submission generation (EPF, SOCSO, EIS, LHDN) — handled by Adrenalin / payroll bureau, not Copilot",
       "Real-time fraud detection — needs Azure ML or a fraud-detection platform"
+    ],
+    files: [
+      { name: "Payroll-Oct-vs-Nov-2026.xlsx", file: "data/Payroll-Oct-vs-Nov-2026.xlsx", why: "Side-by-side October vs November payroll for variance, anomaly and discrepancy reporting." }
     ]
   },
   {
@@ -542,6 +573,10 @@ window.CT_USE_CASES = [
       "Pulling live market salary benchmarks from Mercer / Korn Ferry / WTW — needs the licensed dataset",
       "Approval workflow with finance + CEO sign-off — needs Power Automate",
       "Pushing approved increments back into Adrenalin — needs HRMS API integration"
+    ],
+    files: [
+      { name: "Payroll-Oct-vs-Nov-2026.xlsx", file: "data/Payroll-Oct-vs-Nov-2026.xlsx", why: "Current payroll baseline — Copilot projects FY27 scenarios from this file." },
+      { name: "Engagement-Budget-FY26.xlsx", file: "data/Engagement-Budget-FY26.xlsx", why: "Optional: pin alongside payroll for total people-cost view." }
     ]
   },
   {
@@ -585,6 +620,9 @@ window.CT_USE_CASES = [
       "Live attendance feed from biometric / time-clock devices — handled by Adrenalin's attendance module",
       "Auto-application of leave when an unrecorded absence is detected — needs Power Automate + HRMS connector",
       "Geofencing or facial-recognition validation — needs the Adrenalin mobile app or a third-party tool"
+    ],
+    files: [
+      { name: "Attendance-vs-Leave-Nov2026.xlsx", file: "data/Attendance-vs-Leave-Nov2026.xlsx", why: "Attendance log vs leave records — Copilot reconciles by EmployeeID + date and surfaces mismatches." }
     ]
   },
   {
@@ -636,6 +674,9 @@ window.CT_USE_CASES = [
       "Personalised, AI-curated learning paths per employee — needs Viva Learning + Viva Skills",
       "Live skills-gap dashboard mapped to roles — needs Viva Skills + Power BI",
       "Auto-enrolment in mandatory courses — needs Viva Learning or an LMS"
+    ],
+    files: [
+      { name: "TNA-FY26.xlsx", file: "data/TNA-FY26.xlsx", why: "Training Needs Analysis returns from line managers — consolidate, theme and prioritise." }
     ]
   },
   {
@@ -689,6 +730,10 @@ window.CT_USE_CASES = [
       "Interactive SCORM-compliant e-learning modules — needs Articulate / iSpring / a content authoring tool",
       "Adaptive learning that personalises difficulty per learner — needs Viva Learning + LMS analytics",
       "Translation into multiple languages with on-brand voice-over — needs Azure AI Speech / Translator"
+    ],
+    files: [
+      { name: "AML-Policy-v4.2.docx", file: "data/AML-Policy-v4.2.docx", why: "Source policy to convert into AMLA refresher training (Word draft → PowerPoint deck → Forms quiz)." },
+      { name: "Employee-Handbook-v3.1.docx", file: "data/Employee-Handbook-v3.1.docx", why: "Section 7 (Code of Conduct) — convert to anti-bribery / conflict-of-interest training content." }
     ]
   },
   {
@@ -741,7 +786,8 @@ window.CT_USE_CASES = [
       "Self-serve LMS catalogue, enrolments and CPD tracking — needs Viva Learning or an LMS",
       "Automated reminder cadence with escalation — needs Power Automate",
       "Digital attendance via QR / biometric — needs a separate event-management tool"
-    ]
+    ],
+    files: []
   },
   {
     id: "15-ld-roi",
@@ -785,6 +831,10 @@ window.CT_USE_CASES = [
       "Correlating training with productivity, retention or revenue impact — needs Viva Insights + Power BI",
       "Predictive ROI modelling — needs Azure ML / Fabric",
       "Automated Kirkpatrick Level-3/4 tracking with manager check-ins — needs Viva Glint + a structured follow-up workflow"
+    ],
+    files: [
+      { name: "LD-Feedback-FY26-Q3.xlsx", file: "data/LD-Feedback-FY26-Q3.xlsx", why: "Pre/post scores, satisfaction and course costs — Copilot computes effectiveness, NPS and ROI per course." },
+      { name: "TNA-FY26.xlsx", file: "data/TNA-FY26.xlsx", why: "Pair with feedback to assess: did the training plan address the identified needs?" }
     ]
   }
 ];

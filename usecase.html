@@ -95,6 +95,15 @@ document.getElementById("uc-body").innerHTML = `
 
   ${(uc.feasible||uc.notFeasible) ? `
   <div style="margin-top:22px" class="panel">
+    <h3><span class="ico">📂</span> Files for this exercise</h3>
+    ${(uc.files && uc.files.length) ? `
+      <p style="color:var(--muted);margin:0 0 10px;font-size:13.5px">Download these from the workshop page (or click below) and use them when running the prompts.</p>
+      <ul class="file-list">
+        ${uc.files.map(f=>`<li><a class="file-link" href="${esc(f.file)}" download><span class="file-ico">⬇</span><span class="file-name">${esc(f.name)}</span></a><span class="file-why">${esc(f.why)}</span></li>`).join("")}
+      </ul>`:`<p style="color:var(--muted);margin:0;font-size:13.5px">No source file needed — this is a <b>live exercise</b> (drafting from scratch / Copilot in Teams meeting recap).</p>`}
+  </div>
+
+  <div style="margin-top:22px" class="panel">
     <h3><span class="ico">🧪</span> M365 Copilot feasibility check</h3>
     <p style="color:var(--muted);margin:0 0 10px;font-size:13.5px">An honest read of what paid M365 Copilot can deliver today vs. what needs other tools.</p>
     <div class="feas-grid">
