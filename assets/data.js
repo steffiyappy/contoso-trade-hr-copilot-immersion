@@ -32,7 +32,8 @@ window.CT_USE_CASES = [
       { app:"Copilot in Excel", title:"Ask Copilot to analyse", desc:"Use natural language to surface trends in headcount, attrition, leave balance, overtime by department/branch." },
       { app:"Copilot in Excel", title:"Generate visuals", desc:"Have Copilot insert PivotTables and charts — headcount by department, attrition trend, leave pattern by month." },
       { app:"Analyst agent", title:"Run deeper reasoning (Frontier)", desc:"Use the Analyst agent in Copilot Chat for multi-step analysis — e.g. correlate attrition with overtime hours and tenure bracket." },
-      { app:"Copilot in PowerPoint", title:"Auto-build the deck", desc:"In a blank or branded template, ask Copilot in PowerPoint to create slides from the Excel insights and the Word brief." }
+      { app:"Copilot in PowerPoint", title:"Auto-build the deck", desc:"In a blank or branded template, ask Copilot in PowerPoint to create slides from the Excel insights and the Word brief." },
+      { app:"Agent Builder", title:"Build a self-serve HR Analytics agent", desc:"In M365 Copilot Chat → Agent Builder, create a no-code agent grounded on the HR-Reports SharePoint site so leaders can ask 'What's our November attrition by branch?' without you running it for them." }
     ],
     prompts: {
       "Copilot in Excel": [
@@ -101,7 +102,9 @@ window.CT_USE_CASES = [
       { app:"M365 Copilot Chat", title:"Shortlist screening prep", desc:"Paste candidate CV into Copilot Chat → ask for a competency match against the JD and suggested interview questions." },
       { app:"Copilot in Teams", title:"Interview scheduling & notes", desc:"Use Copilot in Teams to schedule, then auto-summarise the interview with key competency call-outs and next steps." },
       { app:"Copilot in Word", title:"Offer letter generation", desc:"Generate offer letter from a Contoso Trade template; Copilot pulls package details from your draft email." },
-      { app:"Copilot in Outlook", title:"Onboarding communications", desc:"Draft welcome email, IT setup ticket, Day-1 agenda — all from a single Copilot prompt." }
+      { app:"Copilot in Outlook", title:"Onboarding communications", desc:"Draft welcome email, IT setup ticket, Day-1 agenda — all from a single Copilot prompt." },
+      { app:"Researcher agent", title:"Benchmark the salary band (Frontier)", desc:"Use the Researcher agent (multi-model intelligence with Model Council + Critique) to validate the FY26 Compliance Officer salary range and AML talent supply in KL — cited and critiqued." },
+      { app:"Cowork (Frontier preview)", title:"Orchestrate the next 48 hours", desc:"Hand the shortlisted candidate to Cowork — it drafts the callback email, proposes interview slots that work for both interviewers, sends the invite once confirmed, and pauses for your approval at each external send." }
     ],
     prompts: {
       "Copilot in Word": [
@@ -176,7 +179,8 @@ window.CT_USE_CASES = [
       { app:"Copilot in Word", title:"Draft acceptance + checklist", desc:"Generate the resignation acceptance and asset-return checklist from a single prompt." },
       { app:"Copilot in Outlook", title:"Coordinate parties", desc:"Send sequenced reminders to leaver, line manager, IT, and Finance — Copilot drafts each one." },
       { app:"Copilot in Teams", title:"Exit interview recap", desc:"Auto-generate the exit interview summary and themes for HR retention analytics." },
-      { app:"M365 Copilot Chat", title:"Track open items", desc:"Ask Copilot Chat to list outstanding off-boarding items across recent emails and Teams chats." }
+      { app:"M365 Copilot Chat", title:"Track open items", desc:"Ask Copilot Chat to list outstanding off-boarding items across recent emails and Teams chats." },
+      { app:"Cowork (Frontier preview)", title:"Coordinate the off-boarding sequence", desc:"Cowork sends the resignation acknowledgement, books the exit interview, drafts the asset-return checklist, and pings IT-Ops for access revocation — all in one approved sequence." }
     ],
     prompts: {
       "Copilot in Word": [
@@ -241,7 +245,8 @@ window.CT_USE_CASES = [
       { app:"Copilot in Word", title:"Draft warning / SC letters", desc:"Use a Word template; Copilot fills in case facts from your prompt and respects company tone of voice." },
       { app:"Copilot in Excel", title:"Centralise & analyse cases", desc:"Maintain a single case log; ask Copilot to surface trends, repeat offenders and category mix." },
       { app:"Copilot Pages", title:"Live case workspace", desc:"Spin up a Copilot Page from your chat to co-author the case file with line managers and Legal in real time, with full version history and tenant-grade access controls." },
-      { app:"M365 Copilot Chat", title:"Monthly DC report", desc:"Ask Copilot Chat to compile the monthly Disciplinary Committee report from the Excel log." }
+      { app:"M365 Copilot Chat", title:"Monthly DC report", desc:"Ask Copilot Chat to compile the monthly Disciplinary Committee report from the Excel log." },
+      { app:"Agent Builder", title:"Build a Disciplinary Clause Helper agent", desc:"Create a no-code agent in M365 Copilot Chat grounded on the Employee Handbook + AML Policy so HRBPs can classify severity and find the right clause without paging HR Head." }
     ],
     prompts: {
       "Copilot in Word": [
@@ -307,7 +312,8 @@ window.CT_USE_CASES = [
       { app:"Copilot in Excel", title:"Build the live tracker", desc:"Convert your budget tracker to a Table; ask Copilot to compute utilisation %, balance, and over-utilisation flags." },
       { app:"Copilot in Excel", title:"Variance analytics", desc:"Generate budget vs actual charts by initiative and team." },
       { app:"Copilot in Outlook", title:"Approvals & comms", desc:"Draft approval requests and weekly status notes. Summarise pending approvals in your inbox." },
-      { app:"M365 Copilot Chat", title:"Monthly consolidation", desc:"Ground Copilot Chat on the budget workbook and your Outlook approvals folder to draft the monthly engagement report." }
+      { app:"M365 Copilot Chat", title:"Monthly consolidation", desc:"Ground Copilot Chat on the budget workbook and your Outlook approvals folder to draft the monthly engagement report." },
+      { app:"Analyst agent", title:"Reason through the budget (Frontier)", desc:"Hand the budget workbook to the Analyst agent for multi-step reasoning — YTD utilisation, outlier branches, run-rate forecast and reallocation recommendation, with the working shown." }
     ],
     prompts: {
       "Copilot in Excel": [
@@ -371,7 +377,8 @@ window.CT_USE_CASES = [
     flow: [
       { app:"Copilot in Outlook", title:"Find & sort applications", desc:"Have Copilot find this week's welfare emails and summarise pending applications." },
       { app:"Copilot in Excel", title:"Update tracker", desc:"Ask Copilot to update the welfare tracker, calculate eligibility, and produce a utilisation report." },
-      { app:"M365 Copilot Chat", title:"Eligibility checks", desc:"Compare applications to eligibility criteria stored on SharePoint." }
+      { app:"M365 Copilot Chat", title:"Eligibility checks", desc:"Compare applications to eligibility criteria stored on SharePoint." },
+      { app:"Agent Builder", title:"Build a Welfare Eligibility Checker agent", desc:"In Agent Builder, ground a self-serve agent on the Welfare Policy so staff get instant ✅/❌ answers with the cap, documents and clause cited — HR only handles the edge cases." }
     ],
     prompts: {
       "Copilot in Outlook": [
@@ -432,7 +439,8 @@ window.CT_USE_CASES = [
     flow: [
       { app:"Copilot in Excel", title:"Drop in the export", desc:"Open the Adrenalin OT report; convert to a Table." },
       { app:"Copilot in Excel", title:"Trend & outlier detection", desc:"Ask Copilot for monthly trends, top OT earners, and unusual patterns." },
-      { app:"Analyst agent", title:"Multi-step reasoning", desc:"For deeper analysis (correlation with incentives, branch-level patterns), invoke the Analyst agent." }
+      { app:"Analyst agent", title:"Multi-step reasoning", desc:"For deeper analysis (correlation with incentives, branch-level patterns), invoke the Analyst agent." },
+      { app:"Researcher agent", title:"Benchmark OT externally (Frontier)", desc:"Run the Researcher agent for an industry view of OT intensity in Malaysian MSBs and any BNM/DOSH guidance — gives you a defensible target band for the next ManCom paper." }
     ],
     prompts: {
       "Copilot in Excel": [
@@ -590,7 +598,8 @@ window.CT_USE_CASES = [
     flow: [
       { app:"Copilot in Excel", title:"Build the projection", desc:"Ask Copilot to project next year's payroll from current data with assumptions (X% increment, Y new hires)." },
       { app:"Copilot in Excel", title:"Scenario modelling", desc:"Run multiple increment scenarios and compare outputs side-by-side." },
-      { app:"Copilot in PowerPoint", title:"Budget review deck", desc:"Generate the budget review deck for ManCom from the workbook." }
+      { app:"Copilot in PowerPoint", title:"Budget review deck", desc:"Generate the budget review deck for ManCom from the workbook." },
+      { app:"Researcher agent", title:"Pull market salary movement (Frontier)", desc:"Researcher agent — benchmark FY27 increment and bonus trends for Malaysian non-bank FIs (general / compliance / tech), cited and critiqued, to anchor the budget narrative." }
     ],
     prompts: {
       "Copilot in Excel": [
@@ -698,7 +707,8 @@ window.CT_USE_CASES = [
     flow: [
       { app:"Copilot in Excel", title:"Survey & gap analysis", desc:"Drop the survey results in Excel; ask Copilot for top skill gaps by role and tenure." },
       { app:"Copilot in Word", title:"Needs analysis report", desc:"Draft the training needs assessment report grounded on the analysis and your competency framework." },
-      { app:"M365 Copilot Chat", title:"Calendar & path", desc:"Ask Copilot to draft a training calendar based on the gaps and your existing programmes." }
+      { app:"M365 Copilot Chat", title:"Calendar & path", desc:"Ask Copilot to draft a training calendar based on the gaps and your existing programmes." },
+      { app:"Researcher agent", title:"Scan the regulatory + risk landscape (Frontier)", desc:"Use the Researcher agent to surface FY26 must-have training topics for the remittance / e-money sector (BNM mandates + emerging fraud), then map to the 10 Contoso Trade departments." }
     ],
     prompts: {
       "Copilot in Excel": [
@@ -756,7 +766,8 @@ window.CT_USE_CASES = [
     flow: [
       { app:"Copilot in Word", title:"Module outline & handbook", desc:"Generate course outlines and participant handbooks from a SME's brief or an existing PDF." },
       { app:"Copilot in PowerPoint", title:"Slides & facilitator guide", desc:"Auto-generate the workshop deck and facilitator guide from the Word outline." },
-      { app:"M365 Copilot Chat", title:"Quizzes & microlearning", desc:"Generate quiz banks and 5-minute microlearning summaries from the source material." }
+      { app:"M365 Copilot Chat", title:"Quizzes & microlearning", desc:"Generate quiz banks and 5-minute microlearning summaries from the source material." },
+      { app:"Agent Builder", title:"Build the AMLA Refresher Quizzer agent", desc:"In Agent Builder, ground a quiz agent on the AML Policy so any staff member can drill themselves on STR / CDD / EDD whenever they want, with sources cited." }
     ],
     prompts: {
       "Copilot in Word": [
@@ -818,7 +829,8 @@ window.CT_USE_CASES = [
     flow: [
       { app:"Copilot in Outlook", title:"Nominations & reminders", desc:"Draft nomination, confirmation and reminder emails to participants." },
       { app:"Copilot in Teams", title:"Session recap & follow-up", desc:"Use Teams recap to capture attendance and key takeaways automatically." },
-      { app:"M365 Copilot Chat", title:"Feedback & report", desc:"Aggregate feedback responses and generate the post-training report." }
+      { app:"M365 Copilot Chat", title:"Feedback & report", desc:"Aggregate feedback responses and generate the post-training report." },
+      { app:"Cowork (Frontier preview)", title:"Run the session-day choreography", desc:"Cowork sends the calendar invite, books the room, sends the 24-hour Teams reminder, and posts the post-course survey link — pausing for your approval before each external send." }
     ],
     prompts: {
       "Copilot in Outlook": [
@@ -873,7 +885,8 @@ window.CT_USE_CASES = [
     ],
     expected: "Predictive analytics for training impact on productivity and retention.",
     flow: [
-      { app:"Copilot in Excel", title:"Basic analytics", desc:"Compute completion rates, score deltas, training-cost-per-head, hours by department." }
+      { app:"Copilot in Excel", title:"Basic analytics", desc:"Compute completion rates, score deltas, training-cost-per-head, hours by department." },
+      { app:"Analyst agent", title:"Reason through the ROI question (Frontier)", desc:"Analyst agent computes NPS by course/trainer, correlates attendance with downstream OT-quality issues, and recommends which FY27 courses to drop / repeat / redesign — assumptions shown." }
     ],
     prompts: {
       "Copilot in Excel": [
