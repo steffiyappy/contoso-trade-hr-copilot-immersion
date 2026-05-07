@@ -58,7 +58,7 @@ document.getElementById("uc-head").innerHTML = `
   <div class="uc-meta">
     <span class="bdg ${prioClass(uc.priority)}">${uc.priority} priority</span>
     <span class="bdg ${fitClass(uc.fit)}">${fitText(uc.fit)}</span>
-    <span class="bdg" style="background:#162033;color:var(--muted);border:1px solid var(--border)">${esc(uc.fitLabel)}</span>
+    <span class="bdg" style="background:var(--chip);color:var(--ink);border:1px solid var(--border)">${esc(uc.fitLabel)}</span>
     ${uc.apps.map(a=>`<span class="app paid">${esc(a.name)}</span>`).join("")}
   </div>`;
 
@@ -92,6 +92,16 @@ document.getElementById("uc-body").innerHTML = `
       ${flowHtml}
     </div>
   </div>
+
+  ${(uc.feasible||uc.notFeasible) ? `
+  <div style="margin-top:22px" class="panel">
+    <h3><span class="ico">🧪</span> M365 Copilot feasibility check</h3>
+    <p style="color:var(--muted);margin:0 0 10px;font-size:13.5px">An honest read of what paid M365 Copilot can deliver today vs. what needs other tools.</p>
+    <div class="feas-grid">
+      ${uc.feasible ? `<div class="feas-col feas-yes"><h4>✅ Feasible with M365 Copilot</h4><ul>${(uc.feasible||[]).map(x=>`<li>${esc(x)}</li>`).join("")}</ul></div>`:""}
+      ${uc.notFeasible ? `<div class="feas-col feas-no"><h4>🚧 Beyond Copilot — needs other tools</h4><ul>${(uc.notFeasible||[]).map(x=>`<li>${esc(x)}</li>`).join("")}</ul></div>`:""}
+    </div>
+  </div>`:""}
 
   <div style="margin-top:22px" class="panel">
     <h3><span class="ico">💬</span> Try these prompts</h3>

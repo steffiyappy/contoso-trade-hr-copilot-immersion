@@ -1,0 +1,92 @@
+================================================================
+CONTOSO TRADE — HR COPILOT IMMERSION
+Session Summary
+================================================================
+
+Customer:        Contoso Trade (modelled on Merchantrade Asia)
+Industry:        Digital Financial Services (Remittance, FX, Payments, Insurance)
+Headquarters:    Kuala Lumpur, Malaysia
+Use cases:       15 (HR analytics, recruitment, off-boarding, disciplinary,
+                 engagement, welfare, overtime, shift, payroll, salary
+                 budgeting, attendance, L&D needs/content/delivery/ROI)
+
+----------------------------------------------------------------
+LIVE SITE
+----------------------------------------------------------------
+URL:        https://steffiyappy.github.io/contoso-trade-hr-copilot-immersion/
+Password:   THRCI
+Repo:       https://github.com/steffiyappy/contoso-trade-hr-copilot-immersion
+Hosting:    GitHub Pages (legacy build, /, branch=main)
+
+----------------------------------------------------------------
+WHAT'S ON THE SITE
+----------------------------------------------------------------
+1. Password gate (SHA-256 of "THRCI") with show/hide toggle
+2. Workshop overview with 15 use case cards (filterable by priority/fit)
+3. Per-use-case detail pages with:
+   - Pain points and expected outcome
+   - Step-by-step Copilot flow
+   - M365 Copilot feasibility check (✅ feasible vs 🚧 beyond Copilot)
+   - 5-10 contextual prompts per use case (102 prompts total)
+   - Pro-tips and "Beyond Copilot" callouts
+4. Sample data files for live demo (10 files in /data/):
+   - HR-Q1-Analysis.xlsx
+   - Overtime-Report-Nov2026.xlsx
+   - Payroll-Oct-vs-Nov-2026.xlsx
+   - Attendance-vs-Leave-Nov2026.xlsx
+   - Disciplinary-Cases-2026.xlsx
+   - Engagement-Budget-FY26.xlsx
+   - TNA-FY26.xlsx
+   - Welfare-Applications-Nov2026.xlsx
+   - AML-Policy-v4.2.docx
+   - Sample-CVs-Compliance-Role.docx
+5. Licensing summary (M365 Copilot vs add-ons)
+6. Suggested half-day agenda
+7. System theme support (auto light/dark)
+
+----------------------------------------------------------------
+PAID M365 COPILOT FEATURES SHOWCASED
+----------------------------------------------------------------
+- Copilot in Excel (with Analyst agent for advanced data work)
+- Copilot in Word
+- Copilot in PowerPoint (with Designer image generation)
+- Copilot in Outlook
+- Copilot in Teams (live meeting recap)
+- Copilot in Loop / Pages (collaborative drafting)
+- M365 Copilot Chat (multi-file grounding)
+- Researcher agent (paid Frontier add-on, salary & training benchmarking)
+- Analyst agent (paid Frontier add-on, deep data analysis)
+- SharePoint agents (grounding on policy / handbook content)
+
+----------------------------------------------------------------
+TECHNICAL FEASIBILITY — IMPORTANT NOTE
+----------------------------------------------------------------
+The customer's original Excel file listed several outcomes that are NOT
+M365 Copilot capabilities. Each use case page now includes an explicit
+"Feasibility Check" panel separating:
+  ✅ What Copilot can do today
+  🚧 What needs other tools (Power Platform, Dynamics 365, Viva,
+     Azure ML, Adrenalin HRMS API, etc.)
+
+Examples of items moved to "Beyond Copilot":
+- AI-conducted structured digital interviews with competency scoring
+  → not a Copilot capability; needs a vendor or Copilot Studio agent
+- Live Adrenalin HRMS connectivity
+  → needs Power Automate / a custom connector
+- Shift roster optimisation with hard constraints
+  → Copilot is not an optimiser; needs Microsoft Shifts, D365 Field
+    Service, or a WFM tool
+- Predictive attrition / ROI modelling
+  → needs Power BI + Azure ML or Microsoft Fabric
+
+----------------------------------------------------------------
+LOCAL COPIES
+----------------------------------------------------------------
+Site source:   C:\Users\peiyiyap\OneDrive - Microsoft\Documents\
+               Customers\Merchantrade\Merchantrade HR Demo\
+Session work:  C:\Users\peiyiyap\.copilot\session-state\
+               f41ae46e-99ce-4e8f-bf38-b2ba2d62e2c7\files\site\
+
+================================================================
+End of summary
+================================================================
