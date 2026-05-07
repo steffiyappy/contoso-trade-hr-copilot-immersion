@@ -17,7 +17,7 @@ window.CT_USE_CASES = [
       { name: "Copilot in PowerPoint", paid: true },
       { name: "M365 Copilot Chat", paid: true },
       { name: "Analyst agent", paid: true },
-      { name: "Agent Builder (in Copilot Chat)", paid: true }
+      { name: "Agent Builder", paid: true }
     ],
     pain: "Headcount, attrition, leave reports manually pulled from Adrenalin, massaged in Excel, then copy-pasted into PowerPoint — ~1–2 hours per request, daily.",
     pains: [
@@ -42,13 +42,16 @@ window.CT_USE_CASES = [
         "Add a calculated column \"Flight Risk Score\" using these rules: +2 if tenure < 1yr, +1 if leave balance > 80% of entitlement, +2 if department attrition rate > 8%, +1 if base salary is below the median for the same role. Sort the table descending by score and highlight the top 20.",
         "Reformat the Headcount sheet into the Contoso Trade monthly HR Dashboard layout: section 1 = total headcount by branch with % change vs last month, section 2 = top 5 movers (joiners and leavers), section 3 = diversity split by gender for branches > 10 staff. Use our teal as the accent."
       ],
-      "Analyst agent (Copilot Chat)": [
+      "Analyst agent": [
         "Acting as a senior HR data scientist for Contoso Trade, use the Headcount, Attrition_Q1 and LeaveBalance data plus the Overtime-Report-Nov2026.xlsx I shared. Step through: (1) compute a correlation matrix between attrition rate, average overtime hours, leave balance and tenure by department, (2) identify the two strongest correlations and explain causation hypotheses, (3) recommend three concrete HR interventions for the Head of HR with expected impact and a 90-day measurement plan.",
         "From the past 3 months of joiners and leavers, forecast headcount for the Branch Operations and Customer Service teams for the next 12 months under three scenarios: status quo, +10% remittance volume growth, and a 15% attrition-reduction programme. Output a small table per scenario plus the assumptions you used."
       ],
       "Copilot in PowerPoint": [
         "Build a 6-slide \"Q1 FY26 HR Dashboard — Contoso Trade\" presentation grounded on /HR-Q1-Analysis.xlsx. Slide structure: 1) Cover with our teal palette and quarter, 2) Executive summary in 5 bullets, 3) Headcount by branch (chart), 4) Attrition trend by department (chart with the two highest departments highlighted), 5) Leave utilisation insights with one risk callout, 6) Recommendations for the next quarter with owners. Use a single accent colour (#0F766E) and keep each slide to <30 words of body text.",
         "Take the Word brief I shared and convert it into a 4-slide narrative deck for ManCom. For each slide produce a punchy title, a 2-sentence story, one supporting data point, and a speaker note for me to read aloud."
+      ],
+      "Agent Builder": [
+        "Help me build a no-code 'HR Analytics Helper' agent in M365 Copilot Chat. Ground it on the Contoso Trade SharePoint site at /sites/HR-Reports (folders: Headcount, Attrition, Leave). Suggest: (1) a clear agent name, description and starter prompts a Head of HR would actually use; (2) the answer style — concise, with branch + department breakdowns where relevant, always cite the source file + month; (3) 4 conversation starters covering monthly headcount, attrition trend, leave liability and OT outliers; (4) guardrails — never quote individual salary figures, refuse questions about specific employees by name."
       ]
     },
     tip: "For best results, always convert your raw Adrenalin export into a named Excel Table before invoking Copilot — it dramatically improves answer quality. Pin the workbook in Copilot Chat to ask multi-file questions across HR analytics + payroll + OT.",
@@ -66,7 +69,7 @@ window.CT_USE_CASES = [
       "Automated scheduled refresh of dashboards — handled by Power BI / Power Automate, not Copilot"
     ],
     files: [
-      { name: "HR-Q1-Analysis.xlsx", file: "data/HR-Q1-Analysis.xlsx", why: "Source HR data (headcount, attrition, demographics) — pin in Copilot Chat / open in Excel.", how: "Open in Excel and click the Copilot button (or attach in M365 Copilot Chat).", useWith: ["Copilot in Excel", "Analyst agent (Copilot Chat)", "Copilot in PowerPoint"] }
+      { name: "HR-Q1-Analysis.xlsx", file: "data/HR-Q1-Analysis.xlsx", why: "Source HR data (headcount, attrition, demographics) — pin in Copilot Chat / open in Excel.", how: "Open in Excel and click the Copilot button (or attach in M365 Copilot Chat).", useWith: ["Copilot in Excel", "Analyst agent", "Copilot in PowerPoint"] }
     ]
   },
   {
@@ -119,6 +122,12 @@ window.CT_USE_CASES = [
         "Using /Sample-CVs-Compliance-Role.docx and the Compliance Analyst JD I shared, score each candidate out of 100 across these dimensions: (1) AML technical depth (30%), (2) regulatory knowledge BNM/AMLA (20%), (3) tooling experience Actimize / SQL / Power BI (15%), (4) communication & languages (10%), (5) culture and growth signals (15%), (6) compensation fit vs RM 9,500 ceiling (10%). Output a comparison table with totals plus a 1-paragraph recommendation for the hiring manager.",
         "From the 12 CVs in the shared folder, group candidates into Strong / Possible / Reject. For each, give a one-line rationale tied to the JD, the suggested interview focus areas, and any red flags I should validate via reference checks.",
         "Draft a 30-60-90 onboarding plan for our incoming Compliance Analyst at KL HQ. Day 1–7: orientation, PDPA + AML mandatory training, branch shadowing in Subang. Day 8–30: paired investigations with a senior analyst. 31–60: own a low-risk caseload. 61–90: lead a thematic STR review. For each milestone, list the buddy/mentor, success measure, and the SharePoint resources to read."
+      ],
+      "Researcher agent": [
+        "Use the Researcher agent (multi-model with Model Council + Critique) to benchmark Compliance Officer salaries in Kuala Lumpur for the licensed money-services / remittance industry, FY2026. Distinguish junior (1-3 yrs), mid (4-7 yrs) and senior (8+ yrs) bands. For each band give: (1) base salary range in MYR, (2) typical allowances (transport, mobile, AML cert), (3) common bonus structure, (4) sources cited. Also flag any candidate-supply commentary (shortage / abundance) for AMLA-experienced talent. Then critique your own answer — confidence level and what data is missing."
+      ],
+      "Cowork (Frontier preview)": [
+        "Cowork — orchestrate the next 48 hours of the Compliance Officer hire end-to-end: (1) draft and send a personalised callback email to candidate Nurul Aina referencing her Actimize experience; (2) propose 3 interview slots that work for Aisha Rahman (Head of HR) and Lim Wei Jian (Head of Compliance) and place a hold on each; (3) once the candidate confirms, send the Teams calendar invite with the JD attached and an interview prep document; (4) create a Loop-style scorecard in OneNote for both interviewers. Pause for my approval before each external send."
       ]
     },
     tip: "Treat Copilot as your <b>recruiter co-pilot</b> for drafting, screening and scheduling, but keep humans in the decision loop. Never let Copilot make the hire/no-hire call. For CV screening, drop multiple CVs into Copilot Chat and ask for a comparative scoring grid — much faster than reading them sequentially.",
@@ -183,6 +192,9 @@ window.CT_USE_CASES = [
       ],
       "M365 Copilot Chat": [
         "Across my Outlook, Teams chats and the /HR/Off-boarding-Tracker.xlsx, list every off-boarding case currently in progress with: employee, last working day, status of asset return, status of prorated leave settlement, IT ticket status, and who owns the next action. Highlight any case overdue."
+      ],
+      "Cowork (Frontier preview)": [
+        "Cowork — coordinate the off-boarding for CT1042 (Last working day = 30-Nov-2026): (1) send the resignation acknowledgement email from my Outlook using the standard Contoso Trade template; (2) book a 30-min exit interview with the line manager in the next 5 working days; (3) create a Word doc with the asset-return checklist (laptop, phone, ID card, AML token); (4) post a private Teams message to IT-Ops to schedule access revocation on 30-Nov 17:00. Confirm each step with me before sending."
       ]
     },
     tip: "Save standard off-boarding prompt templates in <b>Copilot Pages</b> so every HR exec runs the same flow — consistent tone, same checklist, no missed steps.",
@@ -215,7 +227,7 @@ window.CT_USE_CASES = [
       { name: "Copilot in Excel", paid: true },
       { name: "M365 Copilot Chat", paid: true },
       { name: "Copilot Pages", paid: true },
-      { name: "Agent Builder (in Copilot Chat)", paid: true }
+      { name: "Agent Builder", paid: true }
     ],
     pain: "Cases tracked across multiple Excel files; warning and Show-Cause letters drafted manually; ~2–5 hours for monthly reporting.",
     pains: [
@@ -245,6 +257,9 @@ window.CT_USE_CASES = [
       "M365 Copilot Chat": [
         "Compile the monthly Disciplinary Committee report from /Disciplinary-Cases-2026.xlsx. Format as a 1-page executive summary: (1) cases opened / closed this month with prior-month comparison, (2) top 3 categories by volume, (3) repeat-offender watchlist (anonymised IDs only — no names), (4) thematic patterns I should brief the Branch Heads on, (5) recommended HR actions with target dates. Keep tone factual and neutral.",
         "Find prior cases in the disciplinary log that are similar to this scenario: [scenario description]. For each match, give the case ID, severity, what action was taken, and the outcome. Then recommend the consistent disciplinary action for the new case based on precedent."
+      ],
+      "Agent Builder": [
+        "Build a 'Disciplinary Clause Helper' agent in M365 Copilot Chat for HR Business Partners. Ground it on: Employee-Handbook-v3.1.docx (Section 5 Disciplinary Procedure) and AML-Policy-v4.2.docx (Sections 7 STR + 10 Training breach). Behaviour: when a user describes a misconduct scenario, the agent should (a) classify severity (Minor / Major / Gross), (b) cite the exact handbook clause, (c) suggest the correct stage of action (verbal / written / final / dismissal), (d) list the procedural steps and notice periods, (e) refuse to draft the show-cause letter — refer the user to UC-04 prompt instead. Conversation starters: late attendance, AML training failure, mishandled customer cash, repeated insubordination."
       ]
     },
     tip: "Always cite the specific clause from the Employee Handbook and the AML Policy in your Word prompt — Copilot will mirror the citation style and produce letters that withstand legal review. For sensitive cases, use a private Copilot Chat (no sharing) and avoid pasting full names into prompts you don't want logged.",
@@ -308,6 +323,9 @@ window.CT_USE_CASES = [
       "M365 Copilot Chat": [
         "Using /Engagement-Budget-FY26.xlsx and my November 2026 budget approval emails, write the November consolidation report for the Head of HR. Sections: (1) headline numbers, (2) initiatives over 90% utilised with explanation, (3) initiatives under 40% utilised with reason and recommendation (continue / reduce / reallocate), (4) approvals pending action with owner, (5) ask of leadership. Keep it to one A4 page in plain English.",
         "Compare FY26 engagement spend vs FY25 actuals (file: /HR/Engagement-Budget-FY25-Final.xlsx). For each recurring initiative, compute YoY change and explain the top 3 movers."
+      ],
+      "Analyst agent": [
+        "Analyst agent — using Engagement-Budget-FY26.xlsx (sheets: Budget, Actuals, BranchAllocation), reason step-by-step through the FY26 employee engagement budget. (1) Compute YTD utilisation by category (team-building, festive, recognition, wellness) and by branch. (2) Identify any branch whose festive spend is more than 1.5× the per-headcount average. (3) Forecast Dec spend assuming the run-rate of the last 3 months. (4) Recommend whether to reallocate any underspent category before year-end and quantify the headroom. Show your reasoning, not just the conclusions."
       ]
     },
     tip: "Pin the budget Excel file in <b>Copilot Chat</b> so you can ask cross-file questions like \"compare with last year's actuals\" and \"summarise the related approval emails in my inbox\" in a single conversation.",
@@ -339,7 +357,9 @@ window.CT_USE_CASES = [
       { name: "Copilot in Outlook", paid: true },
       { name: "Copilot in Excel", paid: true },
       { name: "M365 Copilot Chat", paid: true },
-      { name: "Agent Builder (in Copilot Chat)", paid: true }
+      { name: "Agent Builder", paid: true },
+      { name: "Flows agent", paid: true }
+    
     ],
     pain: "Staff applies via Adrenalin, supporting docs by email, manual eligibility check, Excel tracker — slow processing, no visibility.",
     pains: [
@@ -367,6 +387,12 @@ window.CT_USE_CASES = [
       "M365 Copilot Chat": [
         "Summarise the Welfare Policy on SharePoint and tell me — in plain English — the eligibility rules for: (a) an employee with 8 months tenure applying for hospitalisation aid for a parent, (b) an employee with 4 years tenure applying for education aid for a child sitting SPM. Cite the policy clause for each.",
         "I have an unusual welfare application: an employee at Subang branch lost their home in flooding. Walk me through the policy applicable, the maximum support, the documents required, the approval level needed, and draft my reply email confirming next steps."
+      ],
+      "Agent Builder": [
+        "Build a 'Welfare Eligibility Checker' agent in M365 Copilot Chat for Contoso Trade staff to self-serve. Ground it on Welfare-Policy-FY26.docx. Behaviour: ask the user 3 questions — (1) which welfare type (medical, hospitalisation, marriage, bereavement, newborn, education), (2) employee category (Confirmed / Probation / Contract), (3) any prior claims this calendar year. Then return: eligibility ✅/❌, the cap amount in MYR, supporting documents required, the SLA, and the exact policy clause cited. Always include the disclaimer: 'Final approval rests with HR.'"
+      ],
+      "Flows agent": [
+        "Flows agent in M365 Copilot Chat — design a Power Automate flow: trigger = new welfare application submitted via the Welfare Form in SharePoint; actions = (1) notify HR Exec via Teams DM with applicant + amount + category, (2) if amount > RM 5,000, route for Head of HR approval (Approvals connector), (3) on approval, log the decision back into the Welfare Tracker list and email the applicant. Walk me through what the generated flow looks like, what connectors are needed (no Adrenalin connector exists — use HTTP), and the 2 settings I should tweak before turning it on."
       ]
     },
     tip: "Welfare cases are sensitive — pin the Welfare Policy in <b>Copilot Chat</b> so every reply is grounded on the latest version and respects tenure and category rules consistently.",
@@ -419,9 +445,12 @@ window.CT_USE_CASES = [
         "Identify employees who appeared in the top 20 by OT hours for 3 consecutive months. List them with their average monthly OT, total OT pay YTD, and base salary — calculate OT as a percentage of base salary. Highlight any case where OT > 40% of base (a strong signal to revisit headcount or shift structure).",
         "Create a clustered chart of OT hours by branch and department for November, sorted descending by total. Add data labels in RM. Title \"Contoso Trade — November 2026 OT Distribution\". Make the chart fit in cell range A20:K40."
       ],
-      "Analyst agent (Copilot Chat)": [
+      "Analyst agent": [
         "Acting as a workforce analytics specialist, analyse correlation between OT hours and incentive payouts using /Overtime-Report-Nov2026.xlsx and /Payroll-Oct-vs-Nov-2026.xlsx. For each department, compute Pearson correlation between OT_Hours and Incentive amount, then segment employees into quadrants (High OT/High Incentive, High OT/Low Incentive, etc.) and explain what each quadrant likely indicates. Recommend two C&B policy adjustments based on the findings.",
         "Compare the OT distribution across our 7 branches over the last 3 months. Identify which branch is structurally over-reliant on OT (consistently in the top 25% of OT/headcount), and propose a 90-day remediation plan: shift redesign, headcount augmentation, or process change."
+      ],
+      "Researcher agent": [
+        "Researcher agent — produce an industry benchmark for overtime intensity in Malaysian licensed remittance / money-services businesses. Cover: (1) typical OT hours per FTE per month for branch operations vs back-office, (2) prevailing OT-to-base-pay ratio cap before regulators flag fatigue risk, (3) any BNM or DOSH guidance on shift-work overtime. Critique your sources and rate confidence. Then suggest a Contoso Trade target range for FY27 across our 7 branches."
       ]
     },
     tip: "Convert Adrenalin exports to a Table (Ctrl+T) and rename the table (e.g. <span class='kbd'>tblOT_Nov</span>) — Copilot's answers improve significantly when the table has a meaningful name. Combine the OT file with the payroll file in one Copilot Chat for incentive correlation.",
@@ -438,8 +467,8 @@ window.CT_USE_CASES = [
       "Auto-block of OT in the time clock — needs configuration inside Adrenalin itself"
     ],
     files: [
-      { name: "Overtime-Report-Nov2026.xlsx", file: "data/Overtime-Report-Nov2026.xlsx", why: "Monthly OT export — feed into Copilot in Excel for outliers, trends and incentive correlation.", how: "Open in Excel and click Copilot \u2014 and pin the file in M365 Copilot Chat for cross-file questions.", useWith: ["Copilot in Excel", "Analyst agent (Copilot Chat)", "M365 Copilot Chat"] },
-      { name: "Payroll-Oct-vs-Nov-2026.xlsx", file: "data/Payroll-Oct-vs-Nov-2026.xlsx", why: "Pair with the OT file in Copilot Chat to correlate OT cost with payroll movement.", how: "Open in Excel and click Copilot \u2014 and pin in M365 Copilot Chat.", useWith: ["Analyst agent (Copilot Chat)", "M365 Copilot Chat"] }
+      { name: "Overtime-Report-Nov2026.xlsx", file: "data/Overtime-Report-Nov2026.xlsx", why: "Monthly OT export — feed into Copilot in Excel for outliers, trends and incentive correlation.", how: "Open in Excel and click Copilot \u2014 and pin the file in M365 Copilot Chat for cross-file questions.", useWith: ["Copilot in Excel", "Analyst agent", "M365 Copilot Chat"] },
+      { name: "Payroll-Oct-vs-Nov-2026.xlsx", file: "data/Payroll-Oct-vs-Nov-2026.xlsx", why: "Pair with the OT file in Copilot Chat to correlate OT cost with payroll movement.", how: "Open in Excel and click Copilot \u2014 and pin in M365 Copilot Chat.", useWith: ["Analyst agent", "M365 Copilot Chat"] }
     ]
   },
   {
@@ -451,7 +480,9 @@ window.CT_USE_CASES = [
     fitLabel: "Partial Fit (analysis only)",
     apps: [
       { name: "Copilot in Excel", paid: true },
-      { name: "M365 Copilot Chat", paid: true }
+      { name: "M365 Copilot Chat", paid: true },
+      { name: "Flows agent", paid: true }
+    
     ],
     pain: "Shift Master template used to extract & massage data — ~3 days every month.",
     pains: [
@@ -473,6 +504,9 @@ window.CT_USE_CASES = [
       ],
       "M365 Copilot Chat": [
         "Compare November shift coverage against the customer transaction volume in /Branch-Volumes-Nov2026.xlsx. Where did we have over-staffing during low-volume hours and under-staffing during high-volume hours? Quantify the cost impact (over-staffing RM / day) and the customer-experience impact (estimated added wait time)."
+      ],
+      "Flows agent": [
+        "Flows agent — design a Power Automate flow that reads the published Branch-Shift-Roster Excel from SharePoint and 14 days before each shift sends the assigned employee a Teams message and Outlook calendar invite with the branch, shift code (M / E / N) and start time. If the file is republished (newer version detected), automatically resend the updated invite. Show me the trigger, the loop, and the connectors required."
       ]
     },
     beyond: "<b>Beyond Copilot:</b> shift optimisation with hard constraints requires <b>Azure ML</b> or scheduling solvers; or <b>Dynamics 365 Field Service</b> for full workforce scheduling.",
@@ -499,7 +533,9 @@ window.CT_USE_CASES = [
     apps: [
       { name: "Copilot in Excel", paid: true },
       { name: "Analyst agent", paid: true },
-      { name: "M365 Copilot Chat", paid: true }
+      { name: "M365 Copilot Chat", paid: true },
+      { name: "Flows agent", paid: true }
+    
     ],
     pain: "Monthly payroll report manually compared and analysed for discrepancies — ~1 day per month.",
     pains: [
@@ -519,9 +555,12 @@ window.CT_USE_CASES = [
         "For the Branch Operations department, compare November payroll totals vs trailing 3-month average across all components (base, allowance, incentive, OT, deductions). For each component compute the variance, and write a 3-bullet narrative explaining the largest swings.",
         "Build an audit trail report: for each flagged anomaly, suggest the source-of-truth document I should check to validate (e.g. promotion letter, OT approval log, incentive scheme entitlement). Include the suggested check column."
       ],
-      "Analyst agent (Copilot Chat)": [
+      "Analyst agent": [
         "Step through a structured payroll analysis for November using /Payroll-Oct-vs-Nov-2026.xlsx and /Overtime-Report-Nov2026.xlsx. (1) Reconcile OT_Nov in payroll against OT_Amount_RM in the OT report — flag any mismatch > RM 50. (2) For employees with Incentive > RM 1,000, validate against typical scheme caps for their role. (3) Compute total payroll uplift MoM and decompose by driver (base / allowance / incentive / OT / deduction). (4) Produce a one-page management commentary suitable for the CFO.",
         "Investigate the correlation between incentive payouts and OT hours by department over the last 3 months. Hypothesis: high OT may be a proxy for high incentive earners (sales-driven). Confirm or refute with data, and recommend whether the C&B team should de-link the two."
+      ],
+      "Flows agent": [
+        "Flows agent — design a Power Automate flow that, on the 5th of every month, (1) waits for the file Payroll-Bank-File-{Month}.csv to land in the Finance SharePoint library, (2) compares it against Payroll-{Month}.xlsx exported from Adrenalin (use a custom HTTP connector — no certified Adrenalin connector), (3) flags any employee where the bank file amount differs from payroll by more than RM 1, and (4) emails the variance list to Finance + HR Head. Note any approval steps I should add."
       ]
     },
     tip: "Anchor month-on-month comparisons by EmployeeID, not by name — Copilot's accuracy improves when keys are unique. Always include a \"Suspected_Reason\" column so the auditor's review path is obvious.",
@@ -537,7 +576,7 @@ window.CT_USE_CASES = [
       "Real-time fraud detection — needs Azure ML or a fraud-detection platform"
     ],
     files: [
-      { name: "Payroll-Oct-vs-Nov-2026.xlsx", file: "data/Payroll-Oct-vs-Nov-2026.xlsx", why: "Side-by-side October vs November payroll for variance, anomaly and discrepancy reporting.", how: "Open in Excel and click Copilot \u2014 and pin in M365 Copilot Chat.", useWith: ["Copilot in Excel", "Analyst agent (Copilot Chat)", "Copilot in Word"] }
+      { name: "Payroll-Oct-vs-Nov-2026.xlsx", file: "data/Payroll-Oct-vs-Nov-2026.xlsx", why: "Side-by-side October vs November payroll for variance, anomaly and discrepancy reporting.", how: "Open in Excel and click Copilot \u2014 and pin in M365 Copilot Chat.", useWith: ["Copilot in Excel", "Analyst agent", "Copilot in Word"] }
     ]
   },
   {
@@ -577,6 +616,9 @@ window.CT_USE_CASES = [
       ],
       "M365 Copilot Chat": [
         "Acting as our C&B lead, draft a 1-page memo to the CFO defending the FY27 salary budget submission. Cover affordability vs revenue, market benchmark commentary (use general public knowledge of Malaysia FSI salary movement), retention risk if we go below market, and the 3 trade-offs we're proposing. Keep it under 400 words."
+      ],
+      "Researcher agent": [
+        "Researcher agent — benchmark FY27 salary increment percentages and bonus multiples for Malaysian non-bank financial institutions (MSBs, e-money issuers, remittance). Distinguish: (1) general workforce, (2) compliance / AML talent, (3) tech / digital talent. Source from credible publications (Mercer, Willis Towers Watson, Korn Ferry, MEF) and cite. Critique any data gaps and give a recommended Contoso Trade increment band with justification."
       ]
     },
     feasible: [
@@ -626,6 +668,9 @@ window.CT_USE_CASES = [
       ],
       "M365 Copilot Chat": [
         "Acting as my HR Ops co-pilot, prepare the November attendance package for payroll cut-off: (1) the unmatched absences list, (2) the deduction summary by department, (3) draft email templates to each branch manager listing their team's exceptions for sign-off within 24 hours, (4) a short note to the Payroll team confirming what to deduct."
+      ],
+      "Researcher agent": [
+        "Researcher agent — what does the Malaysian Employment Act 1955 (as amended 2022) say about: (1) treatment of unauthorised absence vs medical leave without MC, (2) salary deduction rules for unpaid leave, (3) procedural requirements before disciplinary action for habitual lateness. Cite the exact sections and any case law. Critique your answer and flag where I should ask employment counsel."
       ]
     },
     feasible: [
@@ -679,6 +724,9 @@ window.CT_USE_CASES = [
       "M365 Copilot Chat": [
         "Build the FY26 Training Calendar covering the top 5 enterprise skill gaps identified in /TNA-FY26.xlsx. For each programme, propose: title, target cohort and size, format, duration, suggested vendor type (in-house SME / external trainer / e-Learning vendor), HRDC-claimable status, and a draft month for delivery. Spread programmes evenly across H1 and H2 and avoid overlap with month-end branch peaks (28th–7th of each month).",
         "I need to sell our FY26 L&D plan to the Head of HR. Draft a 90-second talking point I can use, anchored on: top 3 priority skill gaps (with one data point each), expected business outcome per programme, total HRDC-claimable spend, and the one risk if we don't act."
+      ],
+      "Researcher agent": [
+        "Researcher agent — what are the FY26 must-have training topics for a Malaysian remittance / e-money business? Cover: (1) BNM regulatory mandates (AMLA, DNFBP, e-KYC, sanctions screening), (2) emerging risks (deepfake fraud, mule accounts, crypto on-ramp), (3) soft-skill themes peers are investing in (frontline customer de-escalation, branch sales). Cite sources, critique your confidence, and propose a Contoso Trade FY27 curriculum aligned to our 10 departments."
       ]
     },
     beyond: "<b>Beyond Copilot:</b> personalised learning paths and skill recommendations are best delivered by <b>Microsoft Viva Learning + Viva Skills</b> integrated with LinkedIn Learning.",
@@ -708,7 +756,7 @@ window.CT_USE_CASES = [
       { name: "Copilot in Word", paid: true },
       { name: "Copilot in PowerPoint", paid: true },
       { name: "M365 Copilot Chat", paid: true },
-      { name: "Agent Builder (in Copilot Chat)", paid: true }
+      { name: "Agent Builder", paid: true }
     ],
     pain: "Designing and developing learning content (e-learning, workshops, blended) with SMEs takes significant effort.",
     pains: [
@@ -736,6 +784,9 @@ window.CT_USE_CASES = [
         "Generate a 15-question quiz bank based on /AML-Policy-v4.2.docx. Mix: 5 multiple-choice on definitions and obligations, 5 scenario-based (\"a customer brings RM 12,000 in MYR 50 notes and asks to remit to…\") with single-best-answer plus rationale, 5 true/false on STR filing timelines and AMLA 2001. For each question include the source clause from the policy.",
         "Convert the AML Policy into 5 microlearning bites of 200 words each suitable for a 3-minute read on mobile, one per red flag category. Each bite must include: a plain-English explanation, a Contoso Trade-relatable scenario (KL HQ, Subang, Penang…), and a single \"action when you see it\" line.",
         "Curate 5 external resources to supplement our AML training — official BNM guidance, FATF publications, and ACAMS or ICA practitioner content. Provide title, source, link, and a 2-line relevance note per resource. Avoid paywalled vendor content."
+      ],
+      "Agent Builder": [
+        "Build an 'AMLA Refresher Quizzer' agent in M365 Copilot Chat. Ground it on AML-Policy-v4.2.docx. Behaviour: (1) ask the user to choose a difficulty (Easy / Medium / Hard) and a topic (CDD, EDD, Tx Monitoring, STR, Sanctions, Records); (2) ask one multiple-choice question at a time, mark it, cite the exact policy section behind the answer; (3) after 5 questions, give a score and recommend which sections to re-read. Conversation starters: 'Quick 5-question STR quiz', 'Hard CDD scenario', 'Sanctions screening basics'."
       ]
     },
     feasible: [
@@ -794,6 +845,9 @@ window.CT_USE_CASES = [
       "M365 Copilot Chat": [
         "Aggregate feedback from /Training/AML-Feedback.xlsx (3 sessions, 87 respondents). Produce: (1) NPS-style score for the programme, (2) top 3 themes participants liked, (3) top 3 themes for improvement (with verbatim quotes), (4) facilitator effectiveness score per facilitator, (5) actions for the next cohort. Then draft a 200-word post-training report for the Head of HR.",
         "Compile the FY26 L&D delivery dashboard from across our training files: total programmes delivered, total head-count trained, attendance rate, average NPS, HRDC claimed RM, top themes from feedback. Format as a 1-page brief I can paste into the next ManCom pack."
+      ],
+      "Cowork (Frontier preview)": [
+        "Cowork — for the AMLA Refresher session on 18-Nov-2026, 09:00–12:30 at Bangsar HQ Training Room: (1) send the Outlook calendar invite to all 28 enrolled staff with the joining instructions and pre-read; (2) book Training Room 2 + projector via the Resource mailbox; (3) 24h before, send a Teams reminder with the link to the pre-read; (4) on the day, post a thank-you Teams message with the link to the post-course survey. Pause for my approval before each external send."
       ]
     },
     feasible: [
@@ -841,6 +895,9 @@ window.CT_USE_CASES = [
       ],
       "M365 Copilot Chat": [
         "Acting as our L&D analytics partner, draft a 1-page \"FY26 Learning Impact Story\" for the Head of HR. Anchor on: total invested RM, claimable RM recovered, headcount reached, score uplift, three operational outcomes the training likely contributed to (with caveat language), and three priorities for FY27. Keep tone confident but evidence-honest."
+      ],
+      "Analyst agent": [
+        "Analyst agent — using LD-Feedback-FY26-Q3.xlsx, reason step-by-step on training ROI: (1) compute Net Promoter Score per course and per trainer, (2) correlate course attendance with subsequent OT-related quality issues for the same employees (use Overtime-Report-Nov2026.xlsx where IDs match), (3) identify the 3 best-ROI courses and the bottom 2, (4) recommend which courses to drop, repeat or redesign for FY27. Show your assumptions and the Pearson coefficient where relevant."
       ]
     },
     beyond: "<b>Beyond Copilot:</b> predictive ROI requires <b>Viva Insights + Viva Learning</b> for productivity correlation, plus <b>Power BI</b> for the dashboard. <b>Azure ML</b> can model retention impact of L&D investment.",
