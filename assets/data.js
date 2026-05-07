@@ -357,8 +357,7 @@ window.CT_USE_CASES = [
       { name: "Copilot in Outlook", paid: true },
       { name: "Copilot in Excel", paid: true },
       { name: "M365 Copilot Chat", paid: true },
-      { name: "Agent Builder", paid: true },
-      { name: "Flows agent", paid: true }
+      { name: "Agent Builder", paid: true }
     
     ],
     pain: "Staff applies via Adrenalin, supporting docs by email, manual eligibility check, Excel tracker — slow processing, no visibility.",
@@ -390,9 +389,6 @@ window.CT_USE_CASES = [
       ],
       "Agent Builder": [
         "Build a 'Welfare Eligibility Checker' agent in M365 Copilot Chat for Contoso Trade staff to self-serve. Ground it on Welfare-Policy-FY26.docx. Behaviour: ask the user 3 questions — (1) which welfare type (medical, hospitalisation, marriage, bereavement, newborn, education), (2) employee category (Confirmed / Probation / Contract), (3) any prior claims this calendar year. Then return: eligibility ✅/❌, the cap amount in MYR, supporting documents required, the SLA, and the exact policy clause cited. Always include the disclaimer: 'Final approval rests with HR.'"
-      ],
-      "Flows agent": [
-        "Flows agent in M365 Copilot Chat — design a Power Automate flow: trigger = new welfare application submitted via the Welfare Form in SharePoint; actions = (1) notify HR Exec via Teams DM with applicant + amount + category, (2) if amount > RM 5,000, route for Head of HR approval (Approvals connector), (3) on approval, log the decision back into the Welfare Tracker list and email the applicant. Walk me through what the generated flow looks like, what connectors are needed (no Adrenalin connector exists — use HTTP), and the 2 settings I should tweak before turning it on."
       ]
     },
     tip: "Welfare cases are sensitive — pin the Welfare Policy in <b>Copilot Chat</b> so every reply is grounded on the latest version and respects tenure and category rules consistently.",
@@ -480,8 +476,7 @@ window.CT_USE_CASES = [
     fitLabel: "Partial Fit (analysis only)",
     apps: [
       { name: "Copilot in Excel", paid: true },
-      { name: "M365 Copilot Chat", paid: true },
-      { name: "Flows agent", paid: true }
+      { name: "M365 Copilot Chat", paid: true }
     
     ],
     pain: "Shift Master template used to extract & massage data — ~3 days every month.",
@@ -504,9 +499,6 @@ window.CT_USE_CASES = [
       ],
       "M365 Copilot Chat": [
         "Compare November shift coverage against the customer transaction volume in /Branch-Volumes-Nov2026.xlsx. Where did we have over-staffing during low-volume hours and under-staffing during high-volume hours? Quantify the cost impact (over-staffing RM / day) and the customer-experience impact (estimated added wait time)."
-      ],
-      "Flows agent": [
-        "Flows agent — design a Power Automate flow that reads the published Branch-Shift-Roster Excel from SharePoint and 14 days before each shift sends the assigned employee a Teams message and Outlook calendar invite with the branch, shift code (M / E / N) and start time. If the file is republished (newer version detected), automatically resend the updated invite. Show me the trigger, the loop, and the connectors required."
       ]
     },
     beyond: "<b>Beyond Copilot:</b> shift optimisation with hard constraints requires <b>Azure ML</b> or scheduling solvers; or <b>Dynamics 365 Field Service</b> for full workforce scheduling.",
@@ -533,8 +525,7 @@ window.CT_USE_CASES = [
     apps: [
       { name: "Copilot in Excel", paid: true },
       { name: "Analyst agent", paid: true },
-      { name: "M365 Copilot Chat", paid: true },
-      { name: "Flows agent", paid: true }
+      { name: "M365 Copilot Chat", paid: true }
     
     ],
     pain: "Monthly payroll report manually compared and analysed for discrepancies — ~1 day per month.",
@@ -558,9 +549,6 @@ window.CT_USE_CASES = [
       "Analyst agent": [
         "Step through a structured payroll analysis for November using /Payroll-Oct-vs-Nov-2026.xlsx and /Overtime-Report-Nov2026.xlsx. (1) Reconcile OT_Nov in payroll against OT_Amount_RM in the OT report — flag any mismatch > RM 50. (2) For employees with Incentive > RM 1,000, validate against typical scheme caps for their role. (3) Compute total payroll uplift MoM and decompose by driver (base / allowance / incentive / OT / deduction). (4) Produce a one-page management commentary suitable for the CFO.",
         "Investigate the correlation between incentive payouts and OT hours by department over the last 3 months. Hypothesis: high OT may be a proxy for high incentive earners (sales-driven). Confirm or refute with data, and recommend whether the C&B team should de-link the two."
-      ],
-      "Flows agent": [
-        "Flows agent — design a Power Automate flow that, on the 5th of every month, (1) waits for the file Payroll-Bank-File-{Month}.csv to land in the Finance SharePoint library, (2) compares it against Payroll-{Month}.xlsx exported from Adrenalin (use a custom HTTP connector — no certified Adrenalin connector), (3) flags any employee where the bank file amount differs from payroll by more than RM 1, and (4) emails the variance list to Finance + HR Head. Note any approval steps I should add."
       ]
     },
     tip: "Anchor month-on-month comparisons by EmployeeID, not by name — Copilot's accuracy improves when keys are unique. Always include a \"Suspected_Reason\" column so the auditor's review path is obvious.",
