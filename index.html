@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Contoso Trade HR · Copilot Immersion</title>
+<link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body class="lock-body">
+  <div class="lock-wrap">
+    <div class="lock-card">
+      <div class="lock-logo">CT</div>
+      <h1 class="lock-title">Contoso Trade HR · Copilot Immersion</h1>
+      <p class="lock-sub">Enter the session password to continue.</p>
+      <hr />
+      <form id="pwForm" autocomplete="off">
+        <input id="pw" type="password" placeholder="Session password" autofocus />
+        <button type="submit">Enter Workshop →</button>
+        <p id="err" class="err hidden">Incorrect password — try again.</p>
+      </form>
+      <p class="lock-foot">Microsoft 365 Copilot · HR Department Showcase</p>
+    </div>
+  </div>
+
+<script>
+  const HASH = "a1f4add972476319f7d7abece3f744e966c0930cd9a44bece7bac62729d4621c";
+  async function sha256(s){
+    const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(s));
+    return Array.from(new Uint8Array(buf)).map(b=>b.toString(16).padStart(2,"0")).join("");
+  }
+  if (sessionStorage.getItem("ct_unlocked")==="1"){ location.replace("workshop.html"); }
+  document.getElementById("pwForm").addEventListener("submit", async (e)=>{
+    e.preventDefault();
+    const v = document.getElementById("pw").value.trim();
+    const h = await sha256(v);
+    if (h === HASH){
+      sessionStorage.setItem("ct_unlocked","1");
+      location.href = "workshop.html";
+    } else {
+      document.getElementById("err").classList.remove("hidden");
+    }
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Workshop · Contoso Trade HR Copilot Immersion</title>
+<link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+<script>if(sessionStorage.getItem("ct_unlocked")!=="1"){location.replace("index.html");}</script>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="workshop.html">
+      <div class="brand-mark">CT</div>
+      <div class="brand-text"><span>Contoso Trade</span><small>HR · Copilot Immersion</small></div>
+    </a>
+    <div class="nav-links">
+      <a href="workshop.html" class="active">Workshop</a>
+      <a href="workshop.html#cases">Use cases</a>
+      <a href="workshop.html#data">Data files</a>
+      <a href="workshop.html#licensing">Licensing</a>
+      <a href="workshop.html#agenda">Agenda</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-inner">
+    <span class="eyebrow"><span class="dot"></span>Microsoft 365 Copilot · Paid Features</span>
+    <h1 class="hero-h">Reimagine HR at Contoso Trade with <em>Microsoft 365 Copilot</em></h1>
+    <p class="lede">A hands-on immersion mapping every HR pain-point you shared — from HR analytics and recruitment to disciplinary cases, payroll discrepancy detection and L&amp;D — to the paid Microsoft&nbsp;365 Copilot capabilities that solve them today, and what to layer in next.</p>
+    <div class="cta-row">
+      <a href="#cases" class="btn btn-primary">Explore the 15 use cases →</a>
+      <a href="#licensing" class="btn">What's in the paid licence?</a>
+    </div>
+  </div>
+</header>
+
+<section class="block">
+  <div class="container">
+    <div class="stats">
+      <div class="stat"><div class="num">15</div><div class="lbl">HR use cases mapped</div></div>
+      <div class="stat"><div class="num">8</div><div class="lbl">Strong fit with Copilot today</div></div>
+      <div class="stat"><div class="num">5</div><div class="lbl">Partial fit — Copilot + Power Platform</div></div>
+      <div class="stat"><div class="num">~70%</div><div class="lbl">Of HR effort addressable with paid Copilot</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="block alt" id="cases">
+  <div class="container">
+    <h2 class="section-h">Use case gallery</h2>
+    <p class="section-sub">Click any card to open its dedicated walkthrough — pain points, the Copilot apps to use, the step-by-step flow, and ready-to-paste prompts tailored for Contoso Trade HR.</p>
+
+    <div class="cov-row">
+      <div class="cov good">
+        <div class="lbl">Strong / Excellent fit</div>
+        <div class="val">8</div>
+        <small>Disciplinary docs, Engagement budget, Overtime, Payroll, Budgeting, Attendance, L&amp;D Content, L&amp;D Delivery</small>
+      </div>
+      <div class="cov par">
+        <div class="lbl">Partial fit</div>
+        <div class="val">6</div>
+        <small>HR Analytics, Recruitment, Off-boarding, Welfare, Shift Scheduling, L&amp;D Needs Analysis</small>
+      </div>
+      <div class="cov lim">
+        <div class="lbl">Limited fit</div>
+        <div class="val">1</div>
+        <small>L&amp;D ROI Analytics — basic only without Viva + Power BI</small>
+      </div>
+    </div>
+
+    <div class="filter-row" id="filters">
+      <button class="filter on" data-f="all">All</button>
+      <button class="filter" data-f="High">High priority</button>
+      <button class="filter" data-f="Medium">Medium priority</button>
+      <button class="filter" data-f="GOOD">✅ Strong fit</button>
+      <button class="filter" data-f="PARTIAL">⚠️ Partial fit</button>
+      <button class="filter" data-f="LIMITED">🔴 Limited</button>
+    </div>
+
+    <div class="cards" id="cards"></div>
+  </div>
+</section>
+
+<section class="block" id="data">
+  <div class="container">
+    <h2 class="section-h">Sample data files</h2>
+    <p class="section-sub">Realistic, fully fictional Contoso Trade HR datasets you can download to follow every prompt in this workshop. <b>Tip:</b> upload them to your OneDrive or SharePoint before starting, then reference them in Copilot Chat using <span class="kbd">/filename</span>.</p>
+    <div class="lic" id="dataFiles"></div>
+    <p style="color:var(--muted);font-size:12.5px;margin-top:18px">All names, IDs, salaries, cases and amounts are randomly generated. Any resemblance to real Contoso Trade or Merchantrade Asia employees is coincidental.</p>
+  </div>
+</section>
+
+<section class="block alt" id="licensing">
+  <div class="container">
+    <h2 class="section-h">What you get with Microsoft 365 Copilot (paid)</h2>
+    <p class="section-sub">Everything called out in this workshop is covered by the <b>Microsoft 365 Copilot</b> license — sold as a per-user add-on to your existing M365 plans. No additional Azure or Dynamics setup is required for the core flows.</p>
+    <div class="lic">
+      <div class="lic-card">
+        <h4>Microsoft 365 Copilot</h4>
+        <div class="price">USD $30 <small style="font-size:13px;color:var(--muted);font-weight:500">/user/month</small></div>
+        <p>Copilot inside Excel, Word, PowerPoint, Outlook, OneNote, Teams, Loop, plus M365 Copilot Chat with web grounding and tenant data.</p>
+      </div>
+      <div class="lic-card">
+        <h4>Copilot Chat &amp; Pages</h4>
+        <div class="price">Included</div>
+        <p>The home of Copilot for HR — ground answers on SharePoint, OneDrive and Outlook, and capture playbooks in shareable Pages.</p>
+      </div>
+      <div class="lic-card">
+        <h4>Reasoning agents</h4>
+        <div class="price">Included</div>
+        <p><b>Researcher</b> for in-depth research, <b>Analyst</b> for advanced multi-step data analysis — both included with the M365 Copilot license.</p>
+      </div>
+      <div class="lic-card">
+        <h4>SharePoint &amp; Copilot Studio agents</h4>
+        <div class="price">Pay-as-you-go</div>
+        <p>Build HR knowledge agents grounded on your policies, handbook and SOPs — billed via Copilot Credits when used.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="agenda">
+  <div class="container">
+    <h2 class="section-h">Suggested 90-minute immersion agenda</h2>
+    <p class="section-sub">Walk Contoso Trade HR through the highest-impact flows first; spend the remainder of the time on hands-on prompting.</p>
+    <div class="agenda">
+      <div class="item"><div class="ix">1</div><div><h4>Welcome &amp; HR Copilot in 5 minutes</h4><p>Why Copilot, what's in the paid license, and how it works on your data.</p></div></div>
+      <div class="item"><div class="ix">2</div><div><h4>Quick win — Payroll &amp; OT Analysis</h4><p>Live demo: Copilot in Excel finds discrepancies and trends in minutes.</p></div></div>
+      <div class="item"><div class="ix">3</div><div><h4>Quick win — Letter Generation</h4><p>Warning, Show-Cause and Offer letters in Copilot in Word.</p></div></div>
+      <div class="item"><div class="ix">4</div><div><h4>Recruitment co-pilot</h4><p>JD drafting, CV screening, interview recap with Copilot in Word + Teams + Chat.</p></div></div>
+      <div class="item"><div class="ix">5</div><div><h4>HR analytics deck</h4><p>From raw export → leadership PowerPoint, in two prompts.</p></div></div>
+      <div class="item"><div class="ix">6</div><div><h4>What's next</h4><p>Where to layer Power Platform, Viva, Dynamics 365 HR and Azure AI.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Contoso Trade · HR Copilot Immersion · Inspired by the Microsoft 365 Copilot value story for digital financial services.
+  <br />Prepared for an internal customer immersion session.
+</footer>
+
+<script src="assets/data.js"></script>
+<script>
+const cardsEl = document.getElementById("cards");
+function fitClass(f){return f==="GOOD"?"fit-good":f==="PARTIAL"?"fit-partial":"fit-limited"}
+function prioClass(p){return p==="High"?"high":"med"}
+function renderCards(filter="all"){
+  cardsEl.innerHTML = "";
+  window.CT_USE_CASES.filter(uc=>{
+    if(filter==="all")return true;
+    if(filter==="High"||filter==="Medium")return uc.priority===filter;
+    return uc.fit===filter;
+  }).forEach(uc=>{
+    const apps = uc.apps.slice(0,4).map(a=>`<span class="app paid">${a.name}</span>`).join("");
+    cardsEl.insertAdjacentHTML("beforeend",`
+      <a class="card" href="usecase.html#${uc.id}">
+        <div class="card-top">
+          <div class="card-num">${String(uc.num).padStart(2,"0")}</div>
+          <div class="badges">
+            <span class="bdg ${prioClass(uc.priority)}">${uc.priority}</span>
+            <span class="bdg ${fitClass(uc.fit)}">${uc.fit==="GOOD"?"✅ Strong":uc.fit==="PARTIAL"?"⚠️ Partial":"🔴 Limited"}</span>
+          </div>
+        </div>
+        <h3>${uc.title}</h3>
+        <p class="pain">${uc.pain}</p>
+        <div class="apps">${apps}</div>
+        <div class="card-cta"><span style="color:var(--brand-2);font-weight:600;font-size:13px">Open walkthrough →</span></div>
+      </a>`);
+  });
+}
+renderCards();
+
+const FILES = [
+  { f:"HR-Q1-Analysis.xlsx", t:"HR Q1 Dashboard", d:"Headcount, attrition by department & month, leave balances. 120 employees, 7 branches.", uc:"01" },
+  { f:"Overtime-Report-Nov2026.xlsx", t:"Overtime — Nov 2026", d:"Adrenalin-style OT export by employee + 3-month trend by department.", uc:"07" },
+  { f:"Payroll-Oct-vs-Nov-2026.xlsx", t:"Payroll Comparison", d:"Side-by-side payroll for Oct vs Nov 2026 with month-over-month variance %.", uc:"09" },
+  { f:"Attendance-vs-Leave-Nov2026.xlsx", t:"Attendance vs Leave", d:"Attendance log + approved unpaid leave list — built-in mismatches to find.", uc:"11" },
+  { f:"Disciplinary-Cases-2026.xlsx", t:"Disciplinary Cases", d:"70 disciplinary cases across categories with repeat-offender summary.", uc:"04" },
+  { f:"Engagement-Budget-FY26.xlsx", t:"Engagement Budget FY26", d:"Initiative budget vs utilisation + an inbox of approval requests.", uc:"05" },
+  { f:"TNA-FY26.xlsx", t:"Training Needs Analysis", d:"Self vs manager skill ratings, top skill gaps, programme mapping.", uc:"12" },
+  { f:"Welfare-Applications-Nov2026.xlsx", t:"Welfare Applications", d:"30 welfare applications + the eligibility reference table.", uc:"06" },
+  { f:"AML-Policy-v4.2.docx", t:"AML/CFT Policy v4.2", d:"Source document for L&D content creation — generate quizzes, microlearning.", uc:"13" },
+  { f:"Sample-CVs-Compliance-Role.docx", t:"Sample Candidate CVs", d:"Three CVs for the Compliance Analyst role — feed Copilot Chat for screening.", uc:"02" },
+];
+document.getElementById("dataFiles").innerHTML = FILES.map(x=>`
+  <div class="lic-card">
+    <h4>${x.t}</h4>
+    <p style="margin:6px 0 12px">${x.d}</p>
+    <a class="btn btn-primary" style="padding:8px 14px;font-size:13px" href="data/${x.f}" download>⬇ Download</a>
+    <a class="btn" style="padding:8px 14px;font-size:13px;margin-left:6px" href="usecase.html#${window.CT_USE_CASES.find(u=>u.num===parseInt(x.uc))?.id || '01-hr-analytics'}">Open use case</a>
+  </div>`).join("");
+document.getElementById("filters").addEventListener("click", e=>{
+  if(e.target.tagName!=="BUTTON")return;
+  document.querySelectorAll(".filter").forEach(b=>b.classList.remove("on"));
+  e.target.classList.add("on");
+  renderCards(e.target.dataset.f);
+});
+</script>
+</body>
+</html>
