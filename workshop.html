@@ -101,7 +101,7 @@
       <div class="lic-card">
         <h4>Microsoft 365 Copilot</h4>
         <div class="price">USD $30 <small style="font-size:13px;color:var(--muted);font-weight:500">/user/month</small></div>
-        <p>Copilot inside Excel, Word, PowerPoint, Outlook, OneNote, Teams, Loop, plus M365 Copilot Chat with web grounding and tenant data.</p>
+        <p>Copilot inside Excel, Word, PowerPoint, Outlook, OneNote and Teams, plus M365 Copilot Chat with web grounding, tenant data, Pages, Agent Builder, and Frontier-program access to Researcher / Analyst / Cowork.</p>
       </div>
       <div class="lic-card">
         <h4>Copilot Chat &amp; Pages</h4>
@@ -154,7 +154,7 @@ function renderCards(filter="all"){
     if(filter==="High"||filter==="Medium")return uc.priority===filter;
     return uc.fit===filter;
   }).forEach(uc=>{
-    const apps = uc.apps.slice(0,4).map(a=>`<span class="app paid">${a.name}</span>`).join("");
+    const apps = uc.apps.map(a=>`<span class="app paid">${a.name}</span>`).join("");
     cardsEl.insertAdjacentHTML("beforeend",`
       <a class="card" href="usecase.html#${uc.id}">
         <div class="card-top">

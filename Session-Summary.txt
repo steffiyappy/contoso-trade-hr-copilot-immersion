@@ -52,10 +52,12 @@ PAID M365 COPILOT FEATURES SHOWCASED
 - Copilot in PowerPoint (with Designer image generation)
 - Copilot in Outlook
 - Copilot in Teams (live meeting recap)
-- Copilot in Loop / Pages (collaborative drafting)
-- M365 Copilot Chat (multi-file grounding)
-- Researcher agent (paid Frontier add-on, salary & training benchmarking)
-- Analyst agent (paid Frontier add-on, deep data analysis)
+- Copilot Pages (collaborative drafting in Copilot Chat)
+- M365 Copilot Chat (multi-file grounding, Agent Builder host)
+- Researcher agent (Frontier — multi-model intelligence with Model Council & Critique)
+- Analyst agent (Frontier — deep data analysis with Python reasoning)
+- Cowork (Frontier preview — agentic coworker for multi-step actions)
+- Agent Builder in Copilot Chat (no-code custom agents grounded on SharePoint/files)
 - SharePoint agents (grounding on policy / handbook content)
 
 ----------------------------------------------------------------

@@ -1,8 +1,8 @@
 // Contoso Trade — HR Copilot Immersion data
 // Mapped from spreadsheet: 15 use cases. Focused on PAID Microsoft 365 Copilot features.
 // PAID apps in scope (require M365 Copilot license):
-//   M365 Copilot Chat · Copilot in Excel/Word/PowerPoint/Outlook/OneNote/Loop/Teams
-//   Copilot Pages · Researcher & Analyst reasoning agents · SharePoint agents
+//   M365 Copilot Chat (with Agent Builder) · Copilot in Excel/Word/PowerPoint/Outlook/OneNote/Teams
+//   Copilot Pages · Researcher & Analyst reasoning agents · SharePoint agents · Cowork (Frontier preview)
 
 window.CT_USE_CASES = [
   {
@@ -16,7 +16,8 @@ window.CT_USE_CASES = [
       { name: "Copilot in Excel", paid: true },
       { name: "Copilot in PowerPoint", paid: true },
       { name: "M365 Copilot Chat", paid: true },
-      { name: "Analyst agent", paid: true }
+      { name: "Analyst agent", paid: true },
+      { name: "Agent Builder (in Copilot Chat)", paid: true }
     ],
     pain: "Headcount, attrition, leave reports manually pulled from Adrenalin, massaged in Excel, then copy-pasted into PowerPoint — ~1–2 hours per request, daily.",
     pains: [
@@ -56,7 +57,8 @@ window.CT_USE_CASES = [
       "Summarising attrition, headcount and demographic trends from Excel exports (Copilot in Excel + Analyst agent)",
       "Generating leadership-ready PowerPoint decks from those summaries (Copilot in PowerPoint)",
       "Cross-file Q&A across multiple HR exports pinned in Copilot Chat",
-      "Grounding answers on policy documents via a SharePoint agent (paid M365 Copilot add-on)"
+      "Grounding answers on policy documents via a SharePoint agent (paid M365 Copilot add-on)",
+      "Building a no-code HR Policy / FAQ agent in M365 Copilot Chat (Agent Builder), grounded on the policy SharePoint site"
     ],
     notFeasible: [
       "Live, real-time connection to Adrenalin HRMS — Copilot does not have a native Adrenalin connector",
@@ -78,7 +80,9 @@ window.CT_USE_CASES = [
       { name: "Copilot in Outlook", paid: true },
       { name: "Copilot in Word", paid: true },
       { name: "Copilot in Teams", paid: true },
-      { name: "M365 Copilot Chat", paid: true }
+      { name: "M365 Copilot Chat", paid: true },
+      { name: "Researcher agent", paid: true },
+      { name: "Cowork (Frontier preview)", paid: true }
     ],
     pain: "End-to-end manual cycle (>30 days): headcount approval by email, manual JD posting, CV screening, interview coordination, offer drafting, IT/laptop follow-up.",
     pains: [
@@ -124,7 +128,8 @@ window.CT_USE_CASES = [
       "Comparing multiple CVs against a JD as a scoring grid in Copilot Chat (attach CVs + JD)",
       "Live note-taking and recap of interview meetings (Copilot in Teams)",
       "Salary benchmarking research using the Researcher agent (paid Frontier add-on)",
-      "Personalised candidate follow-up emails (Copilot in Outlook)"
+      "Personalised candidate follow-up emails (Copilot in Outlook)",
+      "Orchestrating the end-to-end screening → scheduling → follow-up flow with Cowork (Frontier preview, sequential agentic actions across Outlook + Teams + Word)"
     ],
     notFeasible: [
       "AI-conducted structured digital interviews with automated competency scoring — NOT a Copilot capability; needs an HR-tech vendor (e.g., HireVue, iMocha) or a custom Copilot Studio agent + Azure AI Speech",
@@ -147,7 +152,8 @@ window.CT_USE_CASES = [
       { name: "Copilot in Outlook", paid: true },
       { name: "Copilot in Word", paid: true },
       { name: "Copilot in Teams", paid: true },
-      { name: "M365 Copilot Chat", paid: true }
+      { name: "M365 Copilot Chat", paid: true },
+      { name: "Cowork (Frontier preview)", paid: true }
     ],
     pain: "Resignation acceptance, asset return, prorated leave, and IT ticket closure are all manual — 1–2 hours per case.",
     pains: [
@@ -185,7 +191,8 @@ window.CT_USE_CASES = [
       "Drafting acceptance letters, exit checklists and farewell announcements (Copilot in Word / Outlook)",
       "Sending reminders and tracking responses across IT, Finance, Admin (Copilot in Outlook + Teams)",
       "Generating an exit-interview summary from a Teams meeting (Copilot in Teams)",
-      "Standardising the off-boarding playbook in Copilot Pages so every HR exec follows the same flow"
+      "Standardising the off-boarding playbook in Copilot Pages so every HR exec follows the same flow",
+      "Coordinating the off-boarding checklist across Outlook, Word and Teams with Cowork (Frontier preview)"
     ],
     notFeasible: [
       "Automatic prorated leave/final-pay calculation pulled from Adrenalin — needs Power Automate + HRMS connector",
@@ -206,8 +213,9 @@ window.CT_USE_CASES = [
     apps: [
       { name: "Copilot in Word", paid: true },
       { name: "Copilot in Excel", paid: true },
-      { name: "Copilot in Loop", paid: true },
-      { name: "M365 Copilot Chat", paid: true }
+      { name: "M365 Copilot Chat", paid: true },
+      { name: "Copilot Pages", paid: true },
+      { name: "Agent Builder (in Copilot Chat)", paid: true }
     ],
     pain: "Cases tracked across multiple Excel files; warning and Show-Cause letters drafted manually; ~2–5 hours for monthly reporting.",
     pains: [
@@ -220,7 +228,7 @@ window.CT_USE_CASES = [
     flow: [
       { app:"Copilot in Word", title:"Draft warning / SC letters", desc:"Use a Word template; Copilot fills in case facts from your prompt and respects company tone of voice." },
       { app:"Copilot in Excel", title:"Centralise & analyse cases", desc:"Maintain a single case log; ask Copilot to surface trends, repeat offenders and category mix." },
-      { app:"Copilot in Loop", title:"Live case workspace", desc:"Use a Loop page to collaborate with line managers and Legal on the case file in real time." },
+      { app:"Copilot Pages", title:"Live case workspace", desc:"Spin up a Copilot Page from your chat to co-author the case file with line managers and Legal in real time, with full version history and tenant-grade access controls." },
       { app:"M365 Copilot Chat", title:"Monthly DC report", desc:"Ask Copilot Chat to compile the monthly Disciplinary Committee report from the Excel log." }
     ],
     prompts: {
@@ -244,8 +252,9 @@ window.CT_USE_CASES = [
     feasible: [
       "Drafting Show-Cause, warning and suspension letters with correct AMLA / Handbook clause references (Copilot in Word)",
       "Summarising disciplinary case logs and trend analysis by branch / category (Copilot in Excel)",
-      "Co-authoring sensitive case notes in Copilot Pages or Loop with audit trail",
-      "Grounding letter drafts on the AML Policy and Employee Handbook via a SharePoint agent"
+      "Co-authoring sensitive case notes in Copilot Pages with version history and audit trail",
+      "Grounding letter drafts on the AML Policy and Employee Handbook via a SharePoint agent",
+      "Building a 'Disciplinary clause helper' agent in M365 Copilot Chat (Agent Builder) grounded on the Employee Handbook + AML Policy"
     ],
     notFeasible: [
       "Centralised case-management portal with role-based access — needs Power Apps + Dataverse",
@@ -268,7 +277,8 @@ window.CT_USE_CASES = [
     apps: [
       { name: "Copilot in Excel", paid: true },
       { name: "Copilot in Outlook", paid: true },
-      { name: "M365 Copilot Chat", paid: true }
+      { name: "M365 Copilot Chat", paid: true },
+      { name: "Analyst agent", paid: true }
     ],
     pain: "Engagement budget, utilisation and balances tracked manually in Excel — prone to errors, no real-time visibility.",
     pains: [
@@ -306,7 +316,8 @@ window.CT_USE_CASES = [
       "Forecasting and reconciling engagement spend across branches and quarters (Copilot in Excel + Analyst agent)",
       "Summarising approval email threads and surfacing pending items (Copilot in Outlook)",
       "Drafting budget memos and quarterly review decks (Copilot in Word / PowerPoint)",
-      "Cross-file analysis of budget vs actuals pinned in Copilot Chat"
+      "Cross-file analysis of budget vs actuals pinned in Copilot Chat",
+      "Multi-step variance reasoning with the Analyst agent across the budget workbook + approval-email summaries"
     ],
     notFeasible: [
       "Real-time approval workflow with audit trail — needs Power Automate + Power Apps",
@@ -327,7 +338,8 @@ window.CT_USE_CASES = [
     apps: [
       { name: "Copilot in Outlook", paid: true },
       { name: "Copilot in Excel", paid: true },
-      { name: "M365 Copilot Chat", paid: true }
+      { name: "M365 Copilot Chat", paid: true },
+      { name: "Agent Builder (in Copilot Chat)", paid: true }
     ],
     pain: "Staff applies via Adrenalin, supporting docs by email, manual eligibility check, Excel tracker — slow processing, no visibility.",
     pains: [
@@ -363,7 +375,8 @@ window.CT_USE_CASES = [
       "Drafting welfare letters (bereavement, hospitalisation, marriage) grounded on the Welfare Policy (Copilot in Word)",
       "Summarising welfare applications and eligibility checks against tenure / category rules (Copilot in Excel + Chat)",
       "Personalised acknowledgement emails to applicants (Copilot in Outlook)",
-      "Pinning the Welfare Policy PDF in Copilot Chat so every response is consistent"
+      "Pinning the Welfare Policy PDF in Copilot Chat so every response is consistent",
+      "Building a 'Welfare eligibility checker' agent in M365 Copilot Chat (Agent Builder), grounded on the Welfare Policy — staff can self-serve eligibility questions"
     ],
     notFeasible: [
       "Self-service digital application form with eligibility logic — needs Power Apps / Microsoft Forms + Power Automate",
@@ -384,7 +397,8 @@ window.CT_USE_CASES = [
     apps: [
       { name: "Copilot in Excel", paid: true },
       { name: "Analyst agent", paid: true },
-      { name: "M365 Copilot Chat", paid: true }
+      { name: "M365 Copilot Chat", paid: true },
+      { name: "Researcher agent", paid: true }
     ],
     pain: "Monthly overtime report downloaded from Adrenalin and analysed manually — ~1 day every month.",
     pains: [
@@ -415,7 +429,8 @@ window.CT_USE_CASES = [
       "Branch-level OT trend analysis, outlier detection, top-spenders ranking (Copilot in Excel + Analyst agent)",
       "Cross-correlation of OT data with payroll and attendance files in Copilot Chat",
       "Drafting OT control memos and branch-manager nudge emails (Copilot in Word / Outlook)",
-      "Generating OT review decks for the monthly HR scorecard (Copilot in PowerPoint)"
+      "Generating OT review decks for the monthly HR scorecard (Copilot in PowerPoint)",
+      "Benchmarking OT trends vs Malaysian financial services norms using the Researcher agent (cites public sources)"
     ],
     notFeasible: [
       "Hard-constraint shift optimisation that minimises OT — needs an optimisation solver (Azure ML, Gurobi)",
@@ -535,7 +550,8 @@ window.CT_USE_CASES = [
     apps: [
       { name: "Copilot in Excel", paid: true },
       { name: "Copilot in PowerPoint", paid: true },
-      { name: "M365 Copilot Chat", paid: true }
+      { name: "M365 Copilot Chat", paid: true },
+      { name: "Researcher agent", paid: true }
     ],
     pain: "Annual budgeting takes 2–3 weeks: payroll info massaged into a budget template manually.",
     pains: [
@@ -567,7 +583,8 @@ window.CT_USE_CASES = [
       "Salary increment scenario modelling and pivot summaries (Copilot in Excel + Analyst agent)",
       "Drafting board-paper narratives explaining each scenario (Copilot in Word)",
       "Generating CFO-ready scenario decks with charts (Copilot in PowerPoint)",
-      "Market salary research using the Researcher agent (paid Frontier add-on)"
+      "Market salary research using the Researcher agent (paid Frontier add-on)",
+      "Pulling Malaysia FSI salary movement signals (BNM annual report, EPF data, MEF Salary Survey commentary) with the Researcher agent to inform the budget narrative"
     ],
     notFeasible: [
       "Pulling live market salary benchmarks from Mercer / Korn Ferry / WTW — needs the licensed dataset",
@@ -635,7 +652,8 @@ window.CT_USE_CASES = [
     apps: [
       { name: "Copilot in Excel", paid: true },
       { name: "Copilot in Word", paid: true },
-      { name: "M365 Copilot Chat", paid: true }
+      { name: "M365 Copilot Chat", paid: true },
+      { name: "Researcher agent", paid: true }
     ],
     pain: "1–8 weeks per training cycle: identifying skill gaps, surveys, performance data, frameworks, calendar.",
     pains: [
@@ -689,7 +707,8 @@ window.CT_USE_CASES = [
     apps: [
       { name: "Copilot in Word", paid: true },
       { name: "Copilot in PowerPoint", paid: true },
-      { name: "M365 Copilot Chat", paid: true }
+      { name: "M365 Copilot Chat", paid: true },
+      { name: "Agent Builder (in Copilot Chat)", paid: true }
     ],
     pain: "Designing and developing learning content (e-learning, workshops, blended) with SMEs takes significant effort.",
     pains: [
@@ -724,7 +743,8 @@ window.CT_USE_CASES = [
       "Generating speaker-notes-rich PowerPoint decks with on-brand visuals (Copilot in PowerPoint + Designer image generation)",
       "Producing facilitator guides, learner workbooks and assessment questions (Copilot in Word)",
       "Drafting Microsoft Forms quizzes and post-course surveys",
-      "Summarising regulatory updates (BNM circulars, AMLA amendments) into refresher modules"
+      "Summarising regulatory updates (BNM circulars, AMLA amendments) into refresher modules",
+      "Building an 'AMLA Refresher Quizzer' agent in M365 Copilot Chat (Agent Builder) grounded on the AML Policy — staff can drill themselves any time"
     ],
     notFeasible: [
       "Interactive SCORM-compliant e-learning modules — needs Articulate / iSpring / a content authoring tool",
@@ -746,7 +766,8 @@ window.CT_USE_CASES = [
     apps: [
       { name: "Copilot in Outlook", paid: true },
       { name: "Copilot in Teams", paid: true },
-      { name: "M365 Copilot Chat", paid: true }
+      { name: "M365 Copilot Chat", paid: true },
+      { name: "Cowork (Frontier preview)", paid: true }
     ],
     pain: "Nominations, confirmations, reminders, attendance tracking, feedback collation — all manual.",
     pains: [
@@ -780,7 +801,8 @@ window.CT_USE_CASES = [
       "Co-pilot in the live training room — meeting recap, action items, Q&A summary (Copilot in Teams)",
       "Auto-generating a training summary deck and certificate-of-attendance template (PowerPoint / Word)",
       "Summarising learner chat questions during a webinar (Copilot in Teams)",
-      "Drafting follow-up nudges to no-shows (Copilot in Outlook)"
+      "Drafting follow-up nudges to no-shows (Copilot in Outlook)",
+      "Coordinating room booking, joining instructions, no-show nudges and post-course surveys with Cowork (Frontier preview)"
     ],
     notFeasible: [
       "Self-serve LMS catalogue, enrolments and CPD tracking — needs Viva Learning or an LMS",
@@ -798,7 +820,8 @@ window.CT_USE_CASES = [
     fitLabel: "Limited (basic analysis only)",
     apps: [
       { name: "Copilot in Excel", paid: true },
-      { name: "M365 Copilot Chat", paid: true }
+      { name: "M365 Copilot Chat", paid: true },
+      { name: "Analyst agent", paid: true }
     ],
     pain: "Linking learning to business KPIs and impact measurement is difficult and mostly manual.",
     pains: [
@@ -825,7 +848,8 @@ window.CT_USE_CASES = [
       "Pre vs post-assessment score comparison and learning-effectiveness analysis (Copilot in Excel)",
       "Summarising learner feedback (Forms / surveys) into themes (Copilot in Excel + Chat)",
       "Drafting the ROI narrative report for L&D Council (Copilot in Word)",
-      "Generating the quarterly L&D ROI deck (Copilot in PowerPoint)"
+      "Generating the quarterly L&D ROI deck (Copilot in PowerPoint)",
+      "Reasoning across pre/post scores + course costs + TNA needs with the Analyst agent to explain why one course outperformed another"
     ],
     notFeasible: [
       "Correlating training with productivity, retention or revenue impact — needs Viva Insights + Power BI",
