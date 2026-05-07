@@ -73,10 +73,15 @@ const flowHtml = (uc.flow||[]).map((s,i)=>`
   </div>`).join("");
 
 let promptsHtml = "";
+const filesByCat = {};
+(uc.files||[]).forEach(f=>{
+  (f.useWith||[]).forEach(c=>{ (filesByCat[c]=filesByCat[c]||[]).push(f.name); });
+});
 Object.keys(uc.prompts||{}).forEach(cat=>{
   const items = uc.prompts[cat].map(p=>`
     <div class="prompt">${esc(p)}<button class="prompt-copy" onclick="copyPrompt(this)">Copy</button></div>`).join("");
-  promptsHtml += `<div class="prompt-cat"><h4>${esc(cat)}</h4>${items}</div>`;
+  const fileHint = filesByCat[cat] ? `<div class="cat-file-hint">📂 Open / attach: ${filesByCat[cat].map(n=>`<a href="data/${encodeURIComponent(n)}" download class="kbd">${esc(n)}</a>`).join(" + ")}</div>` : "";
+  promptsHtml += `<div class="prompt-cat"><h4>${esc(cat)}</h4>${fileHint}${items}</div>`;
 });
 
 document.getElementById("uc-body").innerHTML = `
@@ -97,9 +102,19 @@ document.getElementById("uc-body").innerHTML = `
   <div style="margin-top:22px" class="panel">
     <h3><span class="ico">📂</span> Files for this exercise</h3>
     ${(uc.files && uc.files.length) ? `
-      <p style="color:var(--muted);margin:0 0 10px;font-size:13.5px">Download these from the workshop page (or click below) and use them when running the prompts.</p>
+      <div class="howto">
+        <b>How this works:</b> these are <b>raw, editable files</b> — download them, open in Excel/Word (or attach to M365 Copilot Chat), then run the prompts in the next section. You can edit the data and re-run — it's your sandbox.
+      </div>
       <ul class="file-list">
-        ${uc.files.map(f=>`<li><a class="file-link" href="${esc(f.file)}" download><span class="file-ico">⬇</span><span class="file-name">${esc(f.name)}</span></a><span class="file-why">${esc(f.why)}</span></li>`).join("")}
+        ${uc.files.map(f=>`
+          <li>
+            <div class="file-row">
+              <a class="file-link" href="${esc(f.file)}" download><span class="file-ico">⬇</span><span class="file-name">${esc(f.name)}</span></a>
+              <span class="file-why">${esc(f.why)}</span>
+            </div>
+            ${f.how?`<div class="file-how"><b>How to use:</b> ${esc(f.how)}</div>`:""}
+            ${(f.useWith && f.useWith.length)?`<div class="file-use">Use with the prompts under: ${f.useWith.map(c=>`<span class="kbd">${esc(c)}</span>`).join(" ")}</div>`:""}
+          </li>`).join("")}
       </ul>`:`<p style="color:var(--muted);margin:0;font-size:13.5px">No source file needed — this is a <b>live exercise</b> (drafting from scratch / Copilot in Teams meeting recap).</p>`}
   </div>
 

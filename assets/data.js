@@ -64,7 +64,7 @@ window.CT_USE_CASES = [
       "Automated scheduled refresh of dashboards — handled by Power BI / Power Automate, not Copilot"
     ],
     files: [
-      { name: "HR-Q1-Analysis.xlsx", file: "data/HR-Q1-Analysis.xlsx", why: "Source HR data (headcount, attrition, demographics) — pin in Copilot Chat / open in Excel." }
+      { name: "HR-Q1-Analysis.xlsx", file: "data/HR-Q1-Analysis.xlsx", why: "Source HR data (headcount, attrition, demographics) — pin in Copilot Chat / open in Excel.", how: "Open in Excel and click the Copilot button (or attach in M365 Copilot Chat).", useWith: ["Copilot in Excel", "Analyst agent (Copilot Chat)", "Copilot in PowerPoint"] }
     ]
   },
   {
@@ -132,8 +132,8 @@ window.CT_USE_CASES = [
       "Sourcing candidates from LinkedIn — requires LinkedIn Recruiter, separate licence"
     ],
     files: [
-      { name: "Compliance-Officer-JD.docx", file: "data/Compliance-Officer-JD.docx", why: "Reference JD to refine, paste into prompts, or compare CVs against." },
-      { name: "Sample-CVs-Compliance-Role.docx", file: "data/Sample-CVs-Compliance-Role.docx", why: "Three candidate CVs to feed into Copilot Chat for comparative scoring." }
+      { name: "Compliance-Officer-JD.docx", file: "data/Compliance-Officer-JD.docx", why: "Reference JD to refine, paste into prompts, or compare CVs against.", how: "Open in Word for refinement; or attach in M365 Copilot Chat alongside the CVs.", useWith: ["Copilot in Word", "M365 Copilot Chat"] },
+      { name: "Sample-CVs-Compliance-Role.docx", file: "data/Sample-CVs-Compliance-Role.docx", why: "Three candidate CVs to feed into Copilot Chat for comparative scoring.", how: "Attach all CVs to M365 Copilot Chat (\ud83d\udcce attach button) along with the JD.", useWith: ["M365 Copilot Chat"] }
     ]
   },
   {
@@ -193,7 +193,7 @@ window.CT_USE_CASES = [
       "Auto-revoking system access on last working day — needs Entra ID lifecycle workflows"
     ],
     files: [
-      { name: "Employee-Handbook-v3.1.docx", file: "data/Employee-Handbook-v3.1.docx", why: "Section 11 (Resignation & Off-boarding) — ground letters and checklists on the right clauses." }
+      { name: "Employee-Handbook-v3.1.docx", file: "data/Employee-Handbook-v3.1.docx", why: "Section 11 (Resignation & Off-boarding) — ground letters and checklists on the right clauses.", how: "Open in Word for clause lookup; attach in M365 Copilot Chat to ground letter drafts.", useWith: ["Copilot in Word", "Copilot in Outlook", "M365 Copilot Chat"] }
     ]
   },
   {
@@ -253,9 +253,9 @@ window.CT_USE_CASES = [
       "Direct push of finalised letters into Adrenalin's employee record — needs HRMS API integration"
     ],
     files: [
-      { name: "Disciplinary-Cases-2026.xlsx", file: "data/Disciplinary-Cases-2026.xlsx", why: "Live case log to summarise, classify and trend." },
-      { name: "AML-Policy-v4.2.docx", file: "data/AML-Policy-v4.2.docx", why: "AMLA-specific clauses to cite in show-cause and warning letters." },
-      { name: "Employee-Handbook-v3.1.docx", file: "data/Employee-Handbook-v3.1.docx", why: "Section 7 (Code of Conduct) and Section 9 (Disciplinary Procedure) for clause references." }
+      { name: "Disciplinary-Cases-2026.xlsx", file: "data/Disciplinary-Cases-2026.xlsx", why: "Live case log to summarise, classify and trend.", how: "Open in Excel for trend analysis; attach in M365 Copilot Chat with the policy docs.", useWith: ["Copilot in Excel"] },
+      { name: "AML-Policy-v4.2.docx", file: "data/AML-Policy-v4.2.docx", why: "AMLA-specific clauses to cite in show-cause and warning letters.", how: "Open in Word and click Copilot \u2014 or attach in M365 Copilot Chat as grounding for prompts.", useWith: ["Copilot in Word", "M365 Copilot Chat"] },
+      { name: "Employee-Handbook-v3.1.docx", file: "data/Employee-Handbook-v3.1.docx", why: "Section 7 (Code of Conduct) and Section 9 (Disciplinary Procedure) for clause references.", how: "Open in Word for clause lookup; attach in M365 Copilot Chat to ground letter drafts.", useWith: ["Copilot in Word", "M365 Copilot Chat"] }
     ]
   },
   {
@@ -314,7 +314,7 @@ window.CT_USE_CASES = [
       "Automatic GL posting to Finance system — needs Dynamics 365 / SAP integration"
     ],
     files: [
-      { name: "Engagement-Budget-FY26.xlsx", file: "data/Engagement-Budget-FY26.xlsx", why: "Branch × quarter spend vs allocation for variance analysis and memos." }
+      { name: "Engagement-Budget-FY26.xlsx", file: "data/Engagement-Budget-FY26.xlsx", why: "Branch × quarter spend vs allocation for variance analysis and memos.", how: "Open in Excel and click Copilot.", useWith: ["Copilot in Excel", "Copilot in Outlook", "M365 Copilot Chat"] }
     ]
   },
   {
@@ -371,7 +371,7 @@ window.CT_USE_CASES = [
       "Live welfare-spend dashboard — needs Power BI"
     ],
     files: [
-      { name: "Welfare-Applications-Nov2026.xlsx", file: "data/Welfare-Applications-Nov2026.xlsx", why: "November welfare applications to triage, eligibility-check and respond to." }
+      { name: "Welfare-Applications-Nov2026.xlsx", file: "data/Welfare-Applications-Nov2026.xlsx", why: "November welfare applications to triage, eligibility-check and respond to.", how: "Open in Excel; pin together with the Welfare Policy in M365 Copilot Chat.", useWith: ["Copilot in Excel", "Copilot in Word", "Copilot in Outlook"] }
     ]
   },
   {
@@ -423,8 +423,8 @@ window.CT_USE_CASES = [
       "Auto-block of OT in the time clock — needs configuration inside Adrenalin itself"
     ],
     files: [
-      { name: "Overtime-Report-Nov2026.xlsx", file: "data/Overtime-Report-Nov2026.xlsx", why: "Monthly OT export — feed into Copilot in Excel for outliers, trends and incentive correlation." },
-      { name: "Payroll-Oct-vs-Nov-2026.xlsx", file: "data/Payroll-Oct-vs-Nov-2026.xlsx", why: "Pair with the OT file in Copilot Chat to correlate OT cost with payroll movement." }
+      { name: "Overtime-Report-Nov2026.xlsx", file: "data/Overtime-Report-Nov2026.xlsx", why: "Monthly OT export — feed into Copilot in Excel for outliers, trends and incentive correlation.", how: "Open in Excel and click Copilot \u2014 and pin the file in M365 Copilot Chat for cross-file questions.", useWith: ["Copilot in Excel", "Analyst agent (Copilot Chat)", "M365 Copilot Chat"] },
+      { name: "Payroll-Oct-vs-Nov-2026.xlsx", file: "data/Payroll-Oct-vs-Nov-2026.xlsx", why: "Pair with the OT file in Copilot Chat to correlate OT cost with payroll movement.", how: "Open in Excel and click Copilot \u2014 and pin in M365 Copilot Chat.", useWith: ["Analyst agent (Copilot Chat)", "M365 Copilot Chat"] }
     ]
   },
   {
@@ -471,7 +471,7 @@ window.CT_USE_CASES = [
       "Real-time shift swaps and approvals — needs Microsoft Shifts in Teams + Power Automate"
     ],
     files: [
-      { name: "Branch-Shift-Roster-Nov2026.xlsx", file: "data/Branch-Shift-Roster-Nov2026.xlsx", why: "Two-week roster across 7 branches with AML-cert and constraint sheet — Copilot in Excel can audit fairness, gaps and constraint breaches." }
+      { name: "Branch-Shift-Roster-Nov2026.xlsx", file: "data/Branch-Shift-Roster-Nov2026.xlsx", why: "Two-week roster across 7 branches with AML-cert and constraint sheet — Copilot in Excel can audit fairness, gaps and constraint breaches.", how: "Open in Excel and click Copilot \u2014 the second sheet has the constraint rules.", useWith: ["Copilot in Excel", "M365 Copilot Chat"] }
     ]
   },
   {
@@ -522,7 +522,7 @@ window.CT_USE_CASES = [
       "Real-time fraud detection — needs Azure ML or a fraud-detection platform"
     ],
     files: [
-      { name: "Payroll-Oct-vs-Nov-2026.xlsx", file: "data/Payroll-Oct-vs-Nov-2026.xlsx", why: "Side-by-side October vs November payroll for variance, anomaly and discrepancy reporting." }
+      { name: "Payroll-Oct-vs-Nov-2026.xlsx", file: "data/Payroll-Oct-vs-Nov-2026.xlsx", why: "Side-by-side October vs November payroll for variance, anomaly and discrepancy reporting.", how: "Open in Excel and click Copilot \u2014 and pin in M365 Copilot Chat.", useWith: ["Copilot in Excel", "Analyst agent (Copilot Chat)", "Copilot in Word"] }
     ]
   },
   {
@@ -575,8 +575,8 @@ window.CT_USE_CASES = [
       "Pushing approved increments back into Adrenalin — needs HRMS API integration"
     ],
     files: [
-      { name: "Payroll-Oct-vs-Nov-2026.xlsx", file: "data/Payroll-Oct-vs-Nov-2026.xlsx", why: "Current payroll baseline — Copilot projects FY27 scenarios from this file." },
-      { name: "Engagement-Budget-FY26.xlsx", file: "data/Engagement-Budget-FY26.xlsx", why: "Optional: pin alongside payroll for total people-cost view." }
+      { name: "Payroll-Oct-vs-Nov-2026.xlsx", file: "data/Payroll-Oct-vs-Nov-2026.xlsx", why: "Current payroll baseline — Copilot projects FY27 scenarios from this file.", how: "Open in Excel and click Copilot \u2014 and pin in M365 Copilot Chat.", useWith: ["Copilot in Excel", "Copilot in PowerPoint", "M365 Copilot Chat"] },
+      { name: "Engagement-Budget-FY26.xlsx", file: "data/Engagement-Budget-FY26.xlsx", why: "Optional: pin alongside payroll for total people-cost view.", how: "Open in Excel and click Copilot.", useWith: ["Copilot in Excel", "M365 Copilot Chat"] }
     ]
   },
   {
@@ -622,7 +622,7 @@ window.CT_USE_CASES = [
       "Geofencing or facial-recognition validation — needs the Adrenalin mobile app or a third-party tool"
     ],
     files: [
-      { name: "Attendance-vs-Leave-Nov2026.xlsx", file: "data/Attendance-vs-Leave-Nov2026.xlsx", why: "Attendance log vs leave records — Copilot reconciles by EmployeeID + date and surfaces mismatches." }
+      { name: "Attendance-vs-Leave-Nov2026.xlsx", file: "data/Attendance-vs-Leave-Nov2026.xlsx", why: "Attendance log vs leave records — Copilot reconciles by EmployeeID + date and surfaces mismatches.", how: "Open in Excel and click Copilot.", useWith: ["Copilot in Excel", "Copilot in Outlook", "M365 Copilot Chat"] }
     ]
   },
   {
@@ -676,7 +676,7 @@ window.CT_USE_CASES = [
       "Auto-enrolment in mandatory courses — needs Viva Learning or an LMS"
     ],
     files: [
-      { name: "TNA-FY26.xlsx", file: "data/TNA-FY26.xlsx", why: "Training Needs Analysis returns from line managers — consolidate, theme and prioritise." }
+      { name: "TNA-FY26.xlsx", file: "data/TNA-FY26.xlsx", why: "Training Needs Analysis returns from line managers — consolidate, theme and prioritise.", how: "Open in Excel and click Copilot.", useWith: ["Copilot in Excel", "Copilot in Word", "M365 Copilot Chat"] }
     ]
   },
   {
@@ -732,8 +732,8 @@ window.CT_USE_CASES = [
       "Translation into multiple languages with on-brand voice-over — needs Azure AI Speech / Translator"
     ],
     files: [
-      { name: "AML-Policy-v4.2.docx", file: "data/AML-Policy-v4.2.docx", why: "Source policy to convert into AMLA refresher training (Word draft → PowerPoint deck → Forms quiz)." },
-      { name: "Employee-Handbook-v3.1.docx", file: "data/Employee-Handbook-v3.1.docx", why: "Section 7 (Code of Conduct) — convert to anti-bribery / conflict-of-interest training content." }
+      { name: "AML-Policy-v4.2.docx", file: "data/AML-Policy-v4.2.docx", why: "Source policy to convert into AMLA refresher training (Word draft → PowerPoint deck → Forms quiz).", how: "Open in Word and click Copilot \u2014 or attach in M365 Copilot Chat as grounding for prompts.", useWith: ["Copilot in Word", "Copilot in PowerPoint", "M365 Copilot Chat"] },
+      { name: "Employee-Handbook-v3.1.docx", file: "data/Employee-Handbook-v3.1.docx", why: "Section 7 (Code of Conduct) — convert to anti-bribery / conflict-of-interest training content.", how: "Open in Word for clause lookup; attach in M365 Copilot Chat to ground letter drafts.", useWith: ["Copilot in Word", "Copilot in PowerPoint"] }
     ]
   },
   {
@@ -833,8 +833,8 @@ window.CT_USE_CASES = [
       "Automated Kirkpatrick Level-3/4 tracking with manager check-ins — needs Viva Glint + a structured follow-up workflow"
     ],
     files: [
-      { name: "LD-Feedback-FY26-Q3.xlsx", file: "data/LD-Feedback-FY26-Q3.xlsx", why: "Pre/post scores, satisfaction and course costs — Copilot computes effectiveness, NPS and ROI per course." },
-      { name: "TNA-FY26.xlsx", file: "data/TNA-FY26.xlsx", why: "Pair with feedback to assess: did the training plan address the identified needs?" }
+      { name: "LD-Feedback-FY26-Q3.xlsx", file: "data/LD-Feedback-FY26-Q3.xlsx", why: "Pre/post scores, satisfaction and course costs — Copilot computes effectiveness, NPS and ROI per course.", how: "Open in Excel and click Copilot.", useWith: ["Copilot in Excel", "Copilot in Word", "Copilot in PowerPoint"] },
+      { name: "TNA-FY26.xlsx", file: "data/TNA-FY26.xlsx", why: "Pair with feedback to assess: did the training plan address the identified needs?", how: "Open in Excel and click Copilot.", useWith: ["Copilot in Excel", "M365 Copilot Chat"] }
     ]
   }
 ];

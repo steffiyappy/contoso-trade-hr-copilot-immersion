@@ -197,13 +197,20 @@ h2.section-h{font-size:28px;margin:0 0 8px;letter-spacing:-.3px}
 .feas-yes h4{color:#10b981}
 .feas-no{background:rgba(245,158,11,.08);border-color:rgba(245,158,11,.35)}
 .feas-no h4{color:#f59e0b}
-.file-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px}
-.file-list li{display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding:10px 12px;background:var(--input-bg);border:1px solid var(--border);border-radius:8px}
+.howto{padding:10px 12px;background:rgba(20,184,166,.08);border-left:3px solid var(--brand-2);border-radius:6px;color:var(--ink);font-size:13px;line-height:1.6;margin:0 0 12px}
+.file-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:12px}
+.file-list li{padding:12px 14px;background:var(--input-bg);border:1px solid var(--border);border-radius:10px}
+.file-row{display:flex;flex-wrap:wrap;align-items:center;gap:10px}
 .file-link{display:inline-flex;align-items:center;gap:8px;color:var(--brand-2);text-decoration:none;font-weight:600;font-size:13.5px;background:var(--chip);padding:6px 10px;border-radius:6px;border:1px solid var(--border);flex-shrink:0}
 .file-link:hover{background:var(--card-hover);color:var(--brand)}
 .file-ico{font-size:14px}
 .file-name{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:12.5px}
 .file-why{color:var(--muted);font-size:13px;line-height:1.55;flex:1;min-width:240px}
+.file-how{margin-top:8px;color:var(--ink);font-size:12.5px;line-height:1.55}
+.file-how b{color:var(--brand-2)}
+.file-use{margin-top:6px;color:var(--muted);font-size:12.5px;line-height:1.7;display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.cat-file-hint{margin:0 0 10px;padding:8px 10px;background:rgba(139,92,246,.06);border-left:2px solid var(--copilot);border-radius:4px;font-size:12.5px;color:var(--muted);display:flex;flex-wrap:wrap;gap:6px;align-items:center;line-height:1.7}
+.cat-file-hint .kbd{text-decoration:none}
 
 /* Footer */
 footer{padding:36px 24px;border-top:1px solid var(--border);color:var(--muted);font-size:13px;text-align:center}
